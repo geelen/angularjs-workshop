@@ -5,7 +5,8 @@ presentationApp.service('Keyboard', function($rootScope, $document) {
   $document.bind('keydown', function(k) {
     var callback = bindings[k.keyIdentifier];
     if (callback)
-      return $rootScope.$apply(callback);
+      callback();
+      $rootScope.$apply();
   });
 
   this.on = function(keyIdentifier, callback) {
