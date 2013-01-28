@@ -5,9 +5,29 @@ describe('Directive: step', function() {
 
   var element;
 
-  it('should make hidden element visible', inject(function($rootScope, $compile) {
-    element = angular.element('<step></step>');
+  beforeEach(inject(function ($rootScope, $compile) {
+    element = angular.element("<li step='1.2'>An important point</li>");
     element = $compile(element)($rootScope);
-    expect(element.text()).toBe('this is the step directive');
+  }));
+
+  it("should keep the slide's contents", function () {
+    expect(element.text()).toBe('An important point');
+  });
+
+  it("should show the slide if the currentSlide is between 1.2 and 1.9", inject(function ($rootScope) {
+    $rootScope.$apply('currentSlide = 1.0');
+    expect(element.css('visibility')).toBe('hidden');
+
+    $rootScope.$apply('currentSlide = 1.1');
+    expect(element.css('visibility')).toBe('hidden');
+
+    $rootScope.$apply('currentSlide = 1.2');
+    expect(element.css('visibility')).toBe('visible');
+
+    $rootScope.$apply('currentSlide = 1.9');
+    expect(element.css('visibility')).toBe('visible');
+
+    $rootScope.$apply('currentSlide = 2.0');
+    expect(element.css('visibility')).toBe('hidden');
   }));
 });

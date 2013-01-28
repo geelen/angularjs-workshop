@@ -1,11 +1,13 @@
 'use strict';
 
-presentationApp.directive('step', function() {
+presentationApp.directive('step', function () {
   return {
-    template: '<div></div>',
-    restrict: 'E',
-    link: function postLink(scope, element, attrs) {
-      element.text('this is the step directive');
+    link: function (scope, element, attrs) {
+      var id = parseFloat(attrs.step);
+      return scope.$watch("currentSlide", function () {
+        var onCurrentSlide = Math.floor(id) === Math.floor(scope.currentSlide) && id <= scope.currentSlide;
+        return element.css('visibility', onCurrentSlide ? 'visible' : 'hidden');
+      });
     }
   };
 });

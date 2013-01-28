@@ -23,5 +23,5 @@ describe('Directive: slide', function () {
 
     $rootScope.$apply('currentSlide = 1.9');
     expect(element.css('display')).toBe('');
-  }))
+  }));
 });
