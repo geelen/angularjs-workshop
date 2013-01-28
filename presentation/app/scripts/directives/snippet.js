@@ -9,7 +9,6 @@ presentationApp.directive('snippet', function($http) {
     link: function(scope, element, attrs) {
       scope.lang = attrs.lang;
       $http.get(attrs.file + "?livereload=false").success(function(data) {
-        dump(data);
         scope.content = data;
       });
     }
