@@ -1,0 +1,17 @@
+<html ng-app>
+  <head>
+    <script src="/scripts/vendor/angular.js"></script>
+  </head>
+  <body ng-controller="BodyController">
+    <input ng-model='name' size='20'>
+    <p>Hi there, {{name}}</p>
+    <a href ng-click="resetName()">Reset</a>
+
+    <script>
+      var BodyController = function($scope) {
+        $scope.name = "Mr Manager";
+        $scope.resetName = function() { $scope.name = "Mr Manager"; };
+      };
+    </script>
+  </body>
+</html>
