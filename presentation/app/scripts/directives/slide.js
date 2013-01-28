@@ -1,11 +1,17 @@
 'use strict';
 
-presentationApp.directive('slide', function() {
+presentationApp.directive('slide', function () {
   return {
-    template: '<div></div>',
     restrict: 'E',
-    link: function postLink(scope, element, attrs) {
-      element.text('this is the slide directive');
+    template: "<div class='slide' ng-transclude ng-show='isShown()'></div>",
+    replace: true,
+    transclude: true,
+    scope: true,
+    link: function (scope, element, attrs) {
+      var id = parseFloat(attrs.id);
+      return scope.isShown = function () {
+        return Math.floor(id) === Math.floor(scope.currentSlide);
+      };
     }
   };
 });

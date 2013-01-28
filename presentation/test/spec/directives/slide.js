@@ -1,13 +1,27 @@
 'use strict';
 
-describe('Directive: slide', function() {
+describe('Directive: slide', function () {
   beforeEach(module('presentationApp'));
 
   var element;
 
-  it('should make hidden element visible', inject(function($rootScope, $compile) {
-    element = angular.element('<slide></slide>');
+  beforeEach(inject(function ($rootScope, $compile) {
+    $rootScope.currentSlide = 1.0;
+    element = angular.element("<slide id='1'><h1>My Slide</h1></slide>");
     element = $compile(element)($rootScope);
-    expect(element.text()).toBe('this is the slide directive');
   }));
+
+  it("should keep the slide's contents", function () {
+    expect(element.text()).toBe('My Slide');
+  });
+
+  it("should show the slide if the currentSlide is 1.0 to 1.9", inject(function ($rootScope) {
+    expect(element.css('display')).toBe('');
+
+    $rootScope.$apply('currentSlide = 2.0');
+    expect(element.css('display')).toBe('none');
+
+    $rootScope.$apply('currentSlide = 1.9');
+    expect(element.css('display')).toBe('');
+  }))
 });

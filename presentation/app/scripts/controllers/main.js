@@ -1,9 +1,6 @@
 'use strict';
 
 presentationApp.controller('MainCtrl', function($scope) {
-  $scope.awesomeThings = [
-    'HTML5 Boilerplate',
-    'AngularJS',
-    'Testacular'
-  ];
+  $scope.currentSlide = 1;
+  $scope.awesomeThings = [1,2,3];
 });
