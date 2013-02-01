@@ -9,7 +9,7 @@ presentationApp.directive('slide', function () {
     scope: true,
     link: function (scope, element, attrs) {
       var id = parseFloat(attrs.id);
-      return scope.isShown = function () {
+      scope.isShown = function () {
         return Math.floor(id) === Math.floor(scope.currentSlide);
       };
     }
