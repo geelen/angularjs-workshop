@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8"/>
+  <link rel='stylesheet' href="../foundation.css">
+  <style>
+    html, body { height: 100%; }
+    button.runaway {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+    }
+  </style>
+  <script src="../angular.js"></script>
+  <script src="directives.js"></script>
+</head>
+<body>
+<div ng-controller="MyCtrl">
+  <button class='runaway' ng-click='clicked()'>
+    Click me!
+  </button>
+  <h5>{{ message }}</h5>
+</div>
+</body>
+</html>
