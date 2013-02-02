@@ -8,7 +8,16 @@
   </head>
   <body>
     <div ng-controller="TwitterController">
-      We got {{ results.length }} results!
+      <form ng-submit='search()'>
+        <input ng-model="searchTerm">
+        <button type="submit" class='cta-button'>Go!</button>
+      </form>
+      <table>
+        <tr ng-repeat='result in results'>
+          <td>@{{ result.from_user }}</td>
+          <td>{{ result.text }}</td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
