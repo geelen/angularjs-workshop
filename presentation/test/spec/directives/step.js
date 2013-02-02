@@ -6,8 +6,9 @@ describe('Directive: step', function() {
   var element;
 
   beforeEach(inject(function ($rootScope, $compile) {
-    element = angular.element("<li step='1.2'>An important point</li>");
-    element = $compile(element)($rootScope);
+    $rootScope.currentSlide = 1.0;
+    element = angular.element("<slide><li step='2'>An important point</li></slide>");
+    element = $compile(element)($rootScope).find('li');
   }));
 
   it("should keep the slide's contents", function () {

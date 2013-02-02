@@ -7,7 +7,7 @@ describe('Directive: slide', function () {
 
   beforeEach(inject(function ($rootScope, $compile) {
     $rootScope.currentSlide = 1.0;
-    element = angular.element("<slide id='1'><h1>My Slide</h1></slide>");
+    element = angular.element("<slide><h1>My Slide</h1></slide>");
     element = $compile(element)($rootScope);
   }));
 
