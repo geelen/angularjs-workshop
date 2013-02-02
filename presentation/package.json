@@ -1,7 +1,9 @@
 {
-  "author": "",
-  "name": "",
+  "author": "Glen Maddern",
+  "name": "angularjs-ftw",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-jade": "*"
+  },
   "devDependencies": {}
 }
