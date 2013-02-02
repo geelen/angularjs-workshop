@@ -1,242 +1,222 @@
 #stage
-    slide
-      img.poster(src='http://angularftw.com/images/angularjsftw_logo.png')
-      footer.profile
-        p.sub by
-        .image
-        p Glen Maddern
-        a(href='http://twitter.com/glenmaddern') @glenmaddern
+  slide
+    h1 BE A SUPERHERO
+    p.sub with
+    img(src='http://angularjs.org/img/AngularJS-large.png')
+    footer.profile
+      p.sub by
+      .image
+      p Glen Maddern
+      a(href='http://twitter.com/glenmaddern') @glenmaddern
+      | |
+      a(href='http://goodfil.ms')  http://goodfil.ms
+      | |
+      a(href='mailto://glen@goodfil.ms')  glen@goodfil.ms
+  slide
+    h1 Angular
+    p.sub is
+    ul
+      li(step='1')
+        | a
+        strong  framework
+        | for building web applications
+      li(step='2')
+        | an
+        strong  extension
+        | to HTML and browsers
+      li(step='3') at
+        strong  v1.0.3
+        | , backed by Google
+      li(step='4') an
+        strong  alternative
+        | to Backbone/Ember
+      li(step='5') an
+        strong  alternative
+        | to jQuery
+    footer (press ⬇)
+  slide
+    h1 Score card
+    p.sub warning: opinions!
+    table
+      thead
+        tr
+          td
+          td
+            strong Solves
+            span.nowrap a problem well
+          td
+            strong Fast
+            span.nowrap for small sites
+          td
+            strong Maintainable
+            span.nowrap for large sites
+      tbody
+        tr(step='1')
+          td jQuery
+          td ✔
+          td ✔
+          td ✖
+        tr(step='2')
+          td GWT
+          td ✖
+          td ✖
+          td ?
+        tr(step='3')
+          td BackboneJS
+          td ?
+          td ✖
+          td ✖
+        tr(step='4')
+          td EmberJS
+          td ?
+          td ✖
+          td ✔
+        tr(step='5')
+          td AngularJS
+          td ✔
+          td ✔
+          td ✔
+  slide
+    h1 Learning Angular
+    p.sub has 3 phases
+  slide
+    img.big(src='http://2.bp.blogspot.com/-q5aZsORjuwY/T1cJj5FZWWI/AAAAAAAAAOw/EkdsgmMb1FA/s1600/tumblr_lw4m1p8G5J1qzzh6g.jpg')
+    h1 WHOA
+  slide
+    img.big(src='http://www.thinkgeek.com/images/blog/khaaaan.jpg')
+    h1 ANGULAAARRRR
+  slide
+    img.big(src='http://media.npr.org/assets/img/2012/11/20/macklemore-thrift-shop-still_wide-7d4092008474938959d2a80d3216271a0a15e65c-s6-c10.jpg')
+    h1 AWW HELL YEAH
+  slide
+    h1 OK
+  slide
+    h1 Angular
+    ul
+      li
+        .status(step='1') ✔
+        strong solves
+        | a problem well
+      li
+        .status(step='1') ✔
+        | is
+        strong  fast
+        | for small apps
+      li
+        .status(step='1') ✖
+        | is
+        strong  maintainable
+        | for large apps
+    footer(step='1') ...but I can only talk about the first two today
+  slide
+    h1 Components
+    ul
+      li
+        .status(step='1') ✔
+        strong HTML
+        | is your templating language
+      li
+        .status(step='1') ✔
+        strong Two-way data binding
+        | updates the DOM
+      li
+        .status(step='1') ✖
+        strong Directives
+        | define reusable components of behaviour
+      li
+        .status(step='1') ✔
+        strong Controllers
+        | don't touch the DOM
+      li
+        .status(step='1') ✖
+        strong Services
+        | help structure your app
+      li
+        .status(step='1') ✔
+        strong Dependency injection
+        | wires it all together
+    footer(step='1') ...maybe next time?
+  slide
+    h1 NO JS NO PROBLEMS
+    p.sub This is a whole app!
+    snippet(lang='html', file='examples/1.html')
+    iframe(src='examples/1.html', step='1')
+  slide
+    h1 Data binding
+    p.sub Still no code!
+    snippet(lang='html', file='examples/2.html')
+    iframe(src='examples/2.html', step='1')
+  slide
+    h2 Controllers
+    p.sub finally, some code!
+    ul
+      li Attached to certain sections of the DOM
+      li <code>function($scope, ...) { ... }</code>
+      li Should <strong>NEVER</strong> touch the DOM
+      li Instead, it sets values/methods on <code>$scope</code>
+  slide
+    snippet(lang='html', file='examples/3.html')
+    iframe(src='examples/3.html', step='1')
+  slide
+    h2 $scope
+    ul
+      li This is a view-model
+      li It's a plain-old-javascript-object
+      li Change it and the DOM changes, like
+        strong  magic
+        sup *
+    footer * causes 90% of the 'WHOA' and 'ANGULAAARRRR' stages
+  slide
+    h1 Structure
+    img.poster(src='/images/angularjs-structure.png')
+  slide
+    h1 DEMO
+  slide
+    h1 Go be superheroes!
+    ul
+      li Read more at
+        a(href='http://angularjs.org/')  http://angularjs.org/
+        br
+        | do the
+        a(href='http://docs.angularjs.org/tutorial/')  tutorial
+        | , keep the
+        a(href='http://docs.angularjs.org/api/')  api reference
+        | bookmarked.
+      li Watch the introductory and advanced videos on the
+        br
+        a(href='http://www.youtube.com/user/angularjs/videos?view=0') Youtube channel
+        | .
+      li Check out
+        a(href='https://github.com/geelen/melbjs-demo')  the code from tonight's demo
+        | or
+        br
+        a(href='https://github.com/geelen/melbjs-preso')  the code from these slides
+        | (more advanced)
+      li Hit me up on Twitter if you have questions.
+  slide
+    h1 Thank you!
+    .profile
+      p.sub I have been:
+      .image
+      p Glen Maddern
+      a(href='http://twitter.com/glenmaddern') @glenmaddern
         | |
-        a(href='http://goodfil.ms')
-          | http://goodfil.ms
+      a(href='http://goodfil.ms')  http://goodfil.ms
         | |
-        a(href='mailto://glen@goodfil.ms')  glen@goodfil.ms
-      slide
-        h1 Angular
-        p.sub is
-        ul
-          li(step='1')
-            | a
-            strong  framework
-            | for building web applications
-          li(step='2')
-            | an
-            strong  extension
-            | to HTML and browsers
-          li(step='3')
-            | at
-            strong  v1.0.4
-            | , backed by Google
-          li(step='4')
-            | an
-            strong  alternative
-            | to Backbone/Ember
-          li(step='5')
-            | an
-            strong  alternative
-            | to jQuery
-
-        footer (press ⬇)
-      slide
-        h1 Score card
-        p.sub warning: opinions!
-        table
-          thead
-            tr
-              td
-              td
-                strong Solves
-                span.nowrap a problem well
-              td
-                strong Fast
-                span.nowrap for small sites
-              td
-                strong Maintainable
-                span.nowrap for large sites
-          tbody
-            tr(step='1')
-              td jQuery
-              td ✔
-              td ✔
-              td ✖
-            tr(step='2')
-              td GWT
-              td ✖
-              td ✖
-              td ?
-            tr(step='3')
-              td BackboneJS
-              td ?
-              td ✖
-              td ✖
-            tr(step='4')
-              td EmberJS
-              td ?
-              td ✖
-              td ✔
-            tr(step='5')
-              td AngularJS
-              td ✔
-              td ✔
-              td ✔
-      slide
-        h1 Learning Angular
-        p.sub has 3 phases
-      slide
-        img.big(src='http://2.bp.blogspot.com/-q5aZsORjuwY/T1cJj5FZWWI/AAAAAAAAAOw/EkdsgmMb1FA/s1600/tumblr_lw4m1p8G5J1qzzh6g.jpg')
-        h1 WHOA
-      slide
-        img.big(src='http://www.thinkgeek.com/images/blog/khaaaan.jpg')
-        h1 ANGULAAARRRR
-      slide
-        img.big(src='http://media.npr.org/assets/img/2012/11/20/macklemore-thrift-shop-still_wide-7d4092008474938959d2a80d3216271a0a15e65c-s6-c10.jpg')
-        h1 AWW HELL YEAH
-      slide
-        h1 OK
-      slide
-        h1 Angular
-        ul
-          li
-            .status(step='1') ✔
-            strong solves
-            | a problem well
-          li
-            .status(step='1') ✔
-            | is
-            strong  fast
-            | for small apps
-          li
-            .status(step='1') ✖
-            | is
-            strong  maintainable
-            | for large apps
-        footer(step='1') ...but I can only talk about the first two today
-      slide
-        h1 Components
-        ul
-          li
-            .status(step='1') ✔
-            strong HTML
-            | is your templating language
-          li
-            .status(step='1') ✔
-            strong Two-way data binding
-            | updates the DOM
-          li
-            .status(step='1') ✖
-            strong Directives
-            | define reusable components of behaviour
-          li
-            .status(step='1') ✔
-            strong Controllers
-            | don't touch the DOM
-          li
-            .status(step='1') ✖
-            strong Services
-            | help structure your app
-          li
-            .status(step='1') ✔
-            strong Dependency injection
-            | wires it all together
-        footer(step='1') ...maybe next time?
-      slide
-        h1 NO JS NO PROBLEMS
-        p.sub This is a whole app!
-        snippet(lang='html', file='examples/1.html')
-        iframe(src='examples/1.html', step='1')
-      slide
-        h1 Data binding
-        p.sub Still no code!
-        snippet(lang='html', file='examples/2.html')
-        iframe(src='examples/2.html', step='1')
-      slide
-        h2 Controllers
-        p.sub finally, some code!
-        ul
-          li Attached to certain sections of the DOM
-          li
-            code function($scope, ...) { ... }
-          li
-            | Should
-            strong NEVER
-            | touch the DOM
-          li
-            | Instead, it sets values/methods on
-            code $scope
-      slide
-        snippet(lang='html', file='examples/3.html')
-        iframe(src='examples/3.html', step='1')
-      slide
-        h2 $scope
-        ul
-          li This is a view-model
-          li It's a plain-old-javascript-object
-          li
-            | Change it and the DOM changes, like
-            strong  magic
-            sup *
-        footer * causes 90% of the 'WHOA' and 'ANGULAAARRRR' stages
-      slide
-        h1 Structure
-        img.poster(src='/images/angularjs-structure.png')
-      slide
-        h1 DEMO
-      slide
-        h1 Go be superheroes!
-        ul
-          li
-            | Read more at
-            a(href='http://angularjs.org/')  http://angularjs.org/
-            br
-            | do the
-            a(href='http://docs.angularjs.org/tutorial/')  tutorial
-            | , keep the
-            a(href='http://docs.angularjs.org/api/')  api reference
-            | bookmarked.
-          li
-            | Watch the introductory and advanced videos on the
-            br
-            a(href='http://www.youtube.com/user/angularjs/videos?view=0') Youtube channel
-            | .
-          li
-            | Check out
-            a(href='https://github.com/geelen/melbjs-demo')  the code from tonight's demo
-            | or
-            br
-            a(href='https://github.com/geelen/melbjs-preso')  the code from these slides
-            | (more advanced)
-          li Hit me up on Twitter if you have questions.
-      slide
-        h1 Thank you!
-        .profile
-          p.sub I have been:
-          .image
-          p Glen Maddern
-          a(href='http://twitter.com/glenmaddern')
-            | @glenmaddern
-            | |
-          a(href='http://goodfil.ms')
-            | http://goodfil.ms
-            | |
-          a(href='mailto://glen@goodfil.ms')  glen@goodfil.ms
-        p.one-more-thing
-          p.sub also!
-          p
-            | I am running a
-            strong  half-day AngularJS workshop
-            br
-            | here in Melbourne on Saturday,
-            strong
-              | 9th
-              | Feb
-          p
-            | It will cost
-            strong  $300
-          p
-            | Which is a
-            strong  bargain
-            | because you will learn
-            strong  heaps
-          p
-            | Register at
-            a(href='http://angularftw.com/', target='_blank')  angularftw.com
+      a(href='mailto://glen@goodfil.ms')  glen@goodfil.ms
+    p.one-more-thing
+      p.sub also!
+      p I am running a
+        strong  half-day AngularJS workshop
+        br
+        | here in Melbourne on Saturday,
+        strong  9th Feb
+      p It will cost
+        strong  $300
+      p Which is a
+        strong  bargain
+        | because you will learn
+        strong  heaps
+      p Register at
+        a(href='http://angularftw.com/', target='_blank')
+          | angularftw.com
