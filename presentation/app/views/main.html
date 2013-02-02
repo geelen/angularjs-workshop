@@ -102,17 +102,19 @@
     <iframe src="examples/1/basics.html" step="step"></iframe>
   </slide>
   <slide>
-    <h3>Data binding</h3>
+    <h3>Two-way data-binding</h3>
+    <pre><code data-language="html">&lt;input ng-model= ...</code></pre>
+  </slide>
+  <slide>
     <snippet lang="html" file="examples/2/data-binding.html"></snippet>
     <iframe src="examples/2/data-binding.html" step="step"></iframe>
   </slide>
   <slide>
-    <h3>My first controller</h3>
-    <h2>Controllers</h2>
-    <p class="sub">finally, some code!</p>
+    <h3>Controllers</h3>
+    <pre><code data-language="html">&lt;div ng-controller='MyCtrl' ...</code></pre>
+    <pre><code data-language="js">var MyCtrl = function($scope, ... </code></pre>
     <ul>
-      <li>Attached to certain sections of the DOM</li>
-      <li><code>function($scope, ...) { ... }</code></li>
+      <li><strong>Scoped</strong> to a part of the DOM</li>
       <li>Should <strong>NEVER</strong> touch the DOM</li>
       <li>Instead, it sets values/methods on <code>$scope</code></li>
     </ul>

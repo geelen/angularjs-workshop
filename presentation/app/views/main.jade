@@ -110,17 +110,24 @@
   slide
     snippet(lang='html', file='examples/1/basics.html')
     iframe(src='examples/1/basics.html', step)
+
   slide
-    h3 Data binding
+    h3 Two-way data-binding
+    pre
+      code(data-language='html') #{ "<input ng-model= ..."}
+
+  slide
     snippet(lang='html', file='examples/2/data-binding.html')
     iframe(src='examples/2/data-binding.html', step)
+
   slide
-    h3 My first controller
-    h2 Controllers
-    p.sub finally, some code!
+    h3 Controllers
+    pre
+      code(data-language='html') #{ "<div ng-controller='MyCtrl' ..."}
+    pre
+      code(data-language='js') #{ "var MyCtrl = function($scope, ... " }
     ul
-      li Attached to certain sections of the DOM
-      li <code>function($scope, ...) { ... }</code>
+      li <strong>Scoped</strong> to a part of the DOM
       li Should <strong>NEVER</strong> touch the DOM
       li Instead, it sets values/methods on <code>$scope</code>
   slide
