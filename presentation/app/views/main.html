@@ -13,27 +13,35 @@
     <h1>Who am I</h1>
     <p class="sub">anyway?</p>
     <ul>
-      <li>Co-founder of <strong>Goodfilms</strong> (http://goodfil.ms)</li>
-      <li>A <strong>once-reluctant, now enthusiastic</strong> web-developer.</li>
-      <li>Built the <strong>Goodfilms mobile site</strong> in Angular in mid-2011.</li>
-      <li>Have been using AngularJS for side-projects ever since.</li>
-      <li>Built an <strong>interactive movie graph</strong> in Angular + D3js late last year.</li>
-      <li>Presented Angular at <strong>Melbourne Ruby, MelbJS & SydJS</strong>.</li>
-      <li>A total <strong>AngularJS fanboy</strong>.</li>
+      <li step="step">Co-founder of <strong>Goodfilms</strong> (http://goodfil.ms)</li>
+      <li step="step">A <strong>once-reluctant, now enthusiastic</strong> web-developer.</li>
+      <li step="step">Built the <strong>Goodfilms mobile site</strong> in Angular in mid-2011.</li>
+      <li step="step">Have been using AngularJS for <strong>side-projects ever since</strong>.</li>
+      <li step="step">Built an <strong>interactive movie graph</strong> in Angular + D3js late last year.</li>
+      <li step="step">Presented Angular at <strong>Melbourne Ruby, MelbJS & SydJS</strong>.</li>
+      <li step="step">Someone who wants <strong>everyone to be using AngularJS</strong>.</li>
     </ul>
   </slide>
   <slide>
     <h1>This course</h1>
     <p class="sub">will cover</p>
     <ul>
-      <li>The <strong>AngularJS philosophy</strong> & introduction to the <strong>core concepts</strong>.</li>
-      <li>How to use <strong>Directives & Filters</strong> to defeat your enemies.</li>
-      <li>Scaffolding an app with <strong>Yeoman</strong> to reduce boilerplate to 0.</li>
-      <li>The <strong>ease of testing</strong> your app at both unit & end-to-end levels.</li>
-      <li><strong>Communicating between controllers</strong> and handling global state.</li>
-      <li>Decomposing your application into <strong>Services & Factories</strong></li>
-      <li>Understanding how Angular's <strong>dependency injection</strong> wires everything up.</li>
-      <li>How to resolve <strong>common pitfalls</strong> to avoid rage.</li>
+      <li step="step">The <strong>AngularJS philosophy</strong> & introduction to the <strong>core concepts</strong>.</li>
+      <li step="step">How to use <strong>Directives & Filters</strong> to defeat your enemies.</li>
+      <li step="step">Scaffolding an app with <strong>Yeoman</strong> to reduce boilerplate to 0.</li>
+      <li step="step">The <strong>ease of testing</strong> your app at both unit & end-to-end levels.</li>
+      <li step="step"><strong>Communicating between controllers</strong> and handling global state.</li>
+      <li step="step">Decomposing your application into <strong>Services & Factories</strong></li>
+      <li step="step">Understanding how Angular's <strong>dependency injection</strong> wires everything up.</li>
+      <li step="step">How to resolve <strong>common pitfalls</strong> to avoid rage.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Why angular?</h1>
+    <ul>
+      <li step="step"><strong>solves</strong> a problem well</li>
+      <li step="step">is<strong> fast</strong> for small apps</li>
+      <li step="step">is<strong> maintainable</strong> for large apps</li>
     </ul>
   </slide>
   <slide>
@@ -43,11 +51,22 @@
     <h1>Angular</h1>
     <p class="sub">is</p>
     <ul>
-      <li step="1">a<strong> framework</strong>for building web applications</li>
-      <li step="2">an<strong> extension</strong>to HTML and browsers</li>
-      <li step="3">at<strong> v1.0.3</strong>, backed by Google</li>
-      <li step="4">an<strong> alternative</strong>to Backbone/Ember</li>
-      <li step="5">an<strong> alternative</strong>to jQuery</li>
+      <li step="1">a<strong> framework</strong> for building web applications</li>
+      <li step="2">an<strong> extension</strong> to HTML and browsers</li>
+      <li step="3">at<strong> v1.0.4</strong>, backed by Google</li>
+      <li step="4">an<strong> alternative</strong> to Backbone/Ember</li>
+      <li step="5">an<strong> alternative</strong> to jQuery</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Components</h1>
+    <ul>
+      <li step="step"><strong>HTML</strong> is your templating layer</li>
+      <li step="step"><strong>Two-way data binding</strong> updates the DOM</li>
+      <li step="step"><strong>Directives</strong> define reusable components of behaviour</li>
+      <li step="step"><strong>Controllers</strong> don't touch the DOM</li>
+      <li step="step"><strong>Services</strong> help structure your app</li>
+      <li step="step"><strong>Dependency injection</strong> wires it all together</li>
     </ul>
   </slide>
   <slide>
@@ -62,45 +81,6 @@
   </slide>
   <slide><img src="http://media.npr.org/assets/img/2012/11/20/macklemore-thrift-shop-still_wide-7d4092008474938959d2a80d3216271a0a15e65c-s6-c10.jpg" class="big"/>
     <h1>AWW HELL YEAH</h1>
-  </slide>
-  <slide>
-    <h1>Angular</h1>
-    <ul>
-      <li>
-        <div step="1" class="status">✔</div><strong>solves</strong> a problem well
-      </li>
-      <li>
-        <div step="1" class="status">✔</div>is<strong> fast</strong>for small apps
-      </li>
-      <li>
-        <div step="1" class="status">✖</div>is<strong> maintainable</strong>for large apps
-      </li>
-    </ul>
-    <footer step="1">...but I can only talk about the first two today</footer>
-  </slide>
-  <slide>
-    <h1>Components</h1>
-    <ul>
-      <li>
-        <div step="1" class="status">✔</div><strong>HTML</strong>is your templating language
-      </li>
-      <li>
-        <div step="1" class="status">✔</div><strong>Two-way data binding</strong>updates the DOM
-      </li>
-      <li>
-        <div step="1" class="status">✖</div><strong>Directives</strong>define reusable components of behaviour
-      </li>
-      <li>
-        <div step="1" class="status">✔</div><strong>Controllers</strong>don't touch the DOM
-      </li>
-      <li>
-        <div step="1" class="status">✖</div><strong>Services</strong>help structure your app
-      </li>
-      <li>
-        <div step="1" class="status">✔</div><strong>Dependency injection</strong>wires it all together
-      </li>
-    </ul>
-    <footer step="1">...maybe next time?</footer>
   </slide>
   <slide>
     <h1>NO JS NO PROBLEMS</h1>

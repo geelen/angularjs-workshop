@@ -17,26 +17,33 @@
     h1 Who am I
     p.sub anyway?
     ul
-      li Co-founder of <strong>Goodfilms</strong> (http://goodfil.ms)
-      li A <strong>once-reluctant, now enthusiastic</strong> web-developer.
-      li Built the <strong>Goodfilms mobile site</strong> in Angular in mid-2011.
-      li Have been using AngularJS for side-projects ever since.
-      li Built an <strong>interactive movie graph</strong> in Angular + D3js late last year.
-      li Presented Angular at <strong>Melbourne Ruby, MelbJS & SydJS</strong>.
-      li A total <strong>AngularJS fanboy</strong>.
+      li(step) Co-founder of <strong>Goodfilms</strong> (http://goodfil.ms)
+      li(step) A <strong>once-reluctant, now enthusiastic</strong> web-developer.
+      li(step) Built the <strong>Goodfilms mobile site</strong> in Angular in mid-2011.
+      li(step) Have been using AngularJS for <strong>side-projects ever since</strong>.
+      li(step) Built an <strong>interactive movie graph</strong> in Angular + D3js late last year.
+      li(step) Presented Angular at <strong>Melbourne Ruby, MelbJS & SydJS</strong>.
+      li(step) Someone who wants <strong>everyone to be using AngularJS</strong>.
 
   slide
     h1 This course
     p.sub will cover
     ul
-      li The <strong>AngularJS philosophy</strong> & introduction to the <strong>core concepts</strong>.
-      li How to use <strong>Directives & Filters</strong> to defeat your enemies.
-      li Scaffolding an app with <strong>Yeoman</strong> to reduce boilerplate to 0.
-      li The <strong>ease of testing</strong> your app at both unit & end-to-end levels.
-      li <strong>Communicating between controllers</strong> and handling global state.
-      li Decomposing your application into <strong>Services & Factories</strong>
-      li Understanding how Angular's <strong>dependency injection</strong> wires everything up.
-      li How to resolve <strong>common pitfalls</strong> to avoid rage.
+      li(step) The <strong>AngularJS philosophy</strong> & introduction to the <strong>core concepts</strong>.
+      li(step) How to use <strong>Directives & Filters</strong> to defeat your enemies.
+      li(step) Scaffolding an app with <strong>Yeoman</strong> to reduce boilerplate to 0.
+      li(step) The <strong>ease of testing</strong> your app at both unit & end-to-end levels.
+      li(step) <strong>Communicating between controllers</strong> and handling global state.
+      li(step) Decomposing your application into <strong>Services & Factories</strong>
+      li(step) Understanding how Angular's <strong>dependency injection</strong> wires everything up.
+      li(step) How to resolve <strong>common pitfalls</strong> to avoid rage.
+
+  slide
+    h1 Why angular?
+    ul
+      li(step) <strong>solves</strong> a problem well
+      li(step) is<strong> fast</strong> for small apps
+      li(step) is<strong> maintainable</strong> for large apps
 
   slide
     h1 Philosophy
@@ -45,23 +52,33 @@
     h1 Angular
     p.sub is
     ul
-      li(step='1')
+      li(step="1")
         | a
         strong  framework
-        | for building web applications
-      li(step='2')
+        |  for building web applications
+      li(step="2")
         | an
         strong  extension
-        | to HTML and browsers
-      li(step='3') at
-        strong  v1.0.3
+        |  to HTML and browsers
+      li(step="3") at
+        strong  v1.0.4
         | , backed by Google
-      li(step='4') an
+      li(step="4") an
         strong  alternative
-        | to Backbone/Ember
-      li(step='5') an
+        |  to Backbone/Ember
+      li(step="5") an
         strong  alternative
-        | to jQuery
+        |  to jQuery
+
+  slide
+    h1 Components
+    ul
+      li(step) <strong>HTML</strong> is your templating layer
+      li(step) <strong>Two-way data binding</strong> updates the DOM
+      li(step) <strong>Directives</strong> define reusable components of behaviour
+      li(step) <strong>Controllers</strong> don't touch the DOM
+      li(step) <strong>Services</strong> help structure your app
+      li(step) <strong>Dependency injection</strong> wires it all together
 
   slide
     h1 Learning Angular
@@ -76,52 +93,6 @@
     img.big(src='http://media.npr.org/assets/img/2012/11/20/macklemore-thrift-shop-still_wide-7d4092008474938959d2a80d3216271a0a15e65c-s6-c10.jpg')
     h1 AWW HELL YEAH
 
-  slide
-    h1 Angular
-    ul
-      li
-        .status(step='1') ✔
-        strong solves
-        |  a problem well
-      li
-        .status(step='1') ✔
-        | is
-        strong  fast
-        | for small apps
-      li
-        .status(step='1') ✖
-        | is
-        strong  maintainable
-        | for large apps
-    footer(step='1') ...but I can only talk about the first two today
-  slide
-    h1 Components
-    ul
-      li
-        .status(step='1') ✔
-        strong HTML
-        | is your templating language
-      li
-        .status(step='1') ✔
-        strong Two-way data binding
-        | updates the DOM
-      li
-        .status(step='1') ✖
-        strong Directives
-        | define reusable components of behaviour
-      li
-        .status(step='1') ✔
-        strong Controllers
-        | don't touch the DOM
-      li
-        .status(step='1') ✖
-        strong Services
-        | help structure your app
-      li
-        .status(step='1') ✔
-        strong Dependency injection
-        | wires it all together
-    footer(step='1') ...maybe next time?
   slide
     h1 NO JS NO PROBLEMS
     p.sub This is a whole app!
