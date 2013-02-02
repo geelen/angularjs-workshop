@@ -203,6 +203,33 @@
         | is your friend.
 
   slide
+    h1 Directives & Filters
+
+  slide
+    h3 First, a new syntax
+    pre
+      code(data-language='html') #{ "<div ng-app='myapp'>"}
+      br
+      code(data-language='html') #{ "  <div ng-controller='MyCtrl' ..."}
+    pre
+      code(data-language='js') angular.module('myapp', [])
+      br
+      code(data-language='js')   .controller('MyCtrl', function($scope, ...
+    p.sub replaces
+    pre
+      code(data-language='html') #{ "<div ng-app>"}
+      br
+      code(data-language='html') #{ "  <div ng-controller='MyCtrl' ..."}
+    pre
+      code(data-language='js') #{ "var MyCtrl = function($scope, ... " }
+
+  slide
+
+  slide
+  slide
+  slide
+  slide
+
     h2 Structure
     img.poster(src='/images/angularjs-structure.png')
   slide
