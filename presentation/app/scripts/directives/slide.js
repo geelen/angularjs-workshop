@@ -4,7 +4,8 @@ presentationApp.directive('slide', function () {
   var slideCount = 1.0;
   return {
     restrict: 'E',
-    template: "<div class='slide' ng-transclude ng-class='slideClass()'></div>",
+    template: "<div class='slide' ng-class='slideClass()'>" +
+      "<div class='inner' ng-transclude></div></div>",
     replace: true,
     transclude: true,
     scope: true,
