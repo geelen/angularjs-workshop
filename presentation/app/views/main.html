@@ -75,7 +75,29 @@
     <h3>is your templating language</h3>
   </slide>
   <slide>
-    <h3>Look ma! No Javascript!</h3>
+    <pre><code data-language="html">&lt;html ng-app&gt;</code></pre>
+    <pre><code data-language="html">&lt;input ng-model=...</code></pre>
+    <pre><code data-language="html">&lt;a ng-click=...</code></pre>
+    <pre><code data-language="html">&lt;div ng-show=...</code></pre>
+  </slide>
+  <slide>
+    <h3>The jQuery way</h3>
+    <pre><code data-language="html">&lt;a class='close' ...</code></pre>
+    <pre><code data-language="js">$('a.close').click(function( ...</code></pre>
+  </slide>
+  <slide>
+    <h3>The AngularJS alternative</h3>
+    <pre><code data-language="html">&lt;a ng-click='close()' ...</code></pre>
+    <pre><code data-language="js">$scope.close = function( ... </code></pre>
+    <h3 step="step">is very different from</h3>
+    <pre step="1"><code data-language="html">&lt;a onclick='close()' ...</code></pre>
+    <pre step="1"><code data-language="js">var close = function( ... </code></pre>
+  </slide>
+  <slide>
+    <h3>Interpolation is</h3>
+    <h2>{{ "{" + "{ easy }" + "}" }}</h2>
+  </slide>
+  <slide>
     <snippet lang="html" file="examples/1/basics.html"></snippet>
     <iframe src="examples/1/basics.html" step="step"></iframe>
   </slide>
@@ -97,7 +119,7 @@
   </slide>
   <slide>
     <snippet lang="html" file="examples/3/simple-controller.html"></snippet>
-    <iframe src="examples/3.html" step="step"></iframe>
+    <iframe src="examples/3/simple-controller.html" step="step"></iframe>
   </slide>
   <slide>
     <h2>$scope</h2>

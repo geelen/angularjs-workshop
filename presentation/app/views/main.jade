@@ -75,7 +75,39 @@
     h3 is your templating language
 
   slide
-    h3 Look ma! No Javascript!
+    pre
+      code(data-language='html') #{ '<html ng-app>' }
+    pre
+      code(data-language='html') #{ '<input ng-model=...' }
+    pre
+      code(data-language='html') #{ '<a ng-click=...' }
+    pre
+      code(data-language='html') #{ '<div ng-show=...' }
+
+  slide
+    h3 The jQuery way
+    pre
+      code(data-language='html') #{ "<a class='close' ..."}
+    pre
+      code(data-language='js') #{ "$('a.close').click(function( ..." }
+
+  slide
+    h3 The AngularJS alternative
+    pre
+      code(data-language='html') #{ "<a ng-click='close()' ..."}
+    pre
+      code(data-language='js') #{ "$scope.close = function( ... " }
+    h3(step) is very different from
+    pre(step='1')
+      code(data-language='html') #{ "<a onclick='close()' ..."}
+    pre(step='1')
+      code(data-language='js') #{ "var close = function( ... " }
+
+  slide
+    h3 Interpolation is
+    h2 {{ "{" + "{ easy }" + "}" }}
+
+  slide
     snippet(lang='html', file='examples/1/basics.html')
     iframe(src='examples/1/basics.html', step)
   slide
@@ -93,7 +125,7 @@
       li Instead, it sets values/methods on <code>$scope</code>
   slide
     snippet(lang='html', file='examples/3/simple-controller.html')
-    iframe(src='examples/3.html', step)
+    iframe(src='examples/3/simple-controller.html', step)
   slide
     h2 $scope
     ul
