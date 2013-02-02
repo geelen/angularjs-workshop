@@ -147,7 +147,37 @@
   slide
     h3 Challenge: tabbed browsing
     snippet(lang='html', file='examples/4/tabs.html')
-    iframe(src='examples/4/tabs.html', step)
+    snippet(lang='js', file='examples/4/tabs.js')
+
+  slide
+    h3 Tabbed browsing recap
+    ul.thin
+      li
+        code.inline ng-class=expr()
+        | expects
+        code.inline expr()
+        | to return either a string or a
+        code.inline { className: truthy, ...
+        | object.
+      li
+        code.inline ng-show=expr()
+        | shows if
+        code.inline expr()
+        | returns true. (There's also an
+        code.inline ng-hide
+        | ).
+
+  slide
+    h3 Challenge: twitter search
+    p.sub introducing...
+    ul.thin
+      li The
+        code.inline ng-repeat
+        | directive
+      li Performing ajax requests with the
+        code.inline $http
+        | service
+      li Using a simple filter
 
   slide
     h2 Structure
