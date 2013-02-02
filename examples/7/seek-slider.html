@@ -18,12 +18,14 @@
     <!--</div>-->
   <!--</div>-->
 
-  <span id="SalaryAmount">$0 - $200k+</span>
-  <div class="disable-copy-paste slider-marker">
+  <span id="SalaryAmount">${{minSalary}} - ${{maxSalary}}k</span>
+  <div class="slider-marker">
     <div id="Slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
       <div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div>
-      <a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a>
-      <a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a>
+
+      <a grab-me class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a>
+
+      <a class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a>
     </div>
   </div>
 </div>
