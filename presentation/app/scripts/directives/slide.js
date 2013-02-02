@@ -10,7 +10,9 @@ presentationApp.directive('slide', function () {
     transclude: true,
     scope: true,
     controller: function ($scope) {
+      // give each instance of this controller a new ID
       var slideId = slideCount++;
+
       $scope.slideClass = function () {
         var cmp = Math.floor(slideId) - Math.floor($scope.currentSlide);
         return {
@@ -23,6 +25,12 @@ presentationApp.directive('slide', function () {
       // sub directives just need to check whether the slide is invisible
       this.slideIsShown = function () {
         return !$scope.slideClass.hidden;
+      };
+
+      // sub directives can get their step number from us
+      var numSteps = 1;
+      this.nextStepNr = function() {
+        return numSteps++;
       }
     }
   };
