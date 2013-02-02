@@ -72,20 +72,18 @@
 
   slide
     h1 HTML
-    p
-      strong is your templating language
+    h3 is your templating language
 
   slide
-    h1 NO JS NO PROBLEMS
-    p.sub This is a whole app!
-    snippet(lang='html', file='examples/1.html')
-    iframe(src='examples/1.html', step='1')
+    h3 Look ma! No Javascript!
+    snippet(lang='html', file='examples/1/basics.html')
+    iframe(src='examples/1/basics.html', step)
   slide
-    h1 Data binding
-    p.sub Still no code!
-    snippet(lang='html', file='examples/2.html')
-    iframe(src='examples/2.html', step='1')
+    h3 Data binding
+    snippet(lang='html', file='examples/2/data-binding.html')
+    iframe(src='examples/2/data-binding.html', step)
   slide
+    h3 My first controller
     h2 Controllers
     p.sub finally, some code!
     ul
@@ -94,8 +92,8 @@
       li Should <strong>NEVER</strong> touch the DOM
       li Instead, it sets values/methods on <code>$scope</code>
   slide
-    snippet(lang='html', file='examples/3.html')
-    iframe(src='examples/3.html', step='1')
+    snippet(lang='html', file='examples/3/simple-controller.html')
+    iframe(src='examples/3.html', step)
   slide
     h2 $scope
     ul
