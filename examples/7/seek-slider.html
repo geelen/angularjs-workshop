@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='seekSlider'>
+<head>
+  <meta charset="utf-8"/>
+  <link rel='stylesheet' href="seek-slider.css">
+  <script src="../angular.js"></script>
+  <script src="seek-slider.js"></script>
+</head>
+<body>
+<div ng-controller="SeekController">
+  <!-- original version -->
+  <!--<span id="SalaryAmount">$0 - $200k+</span>-->
+  <!--<div class="disable-copy-paste slider-marker">-->
+    <!--<div id="Slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">-->
+      <!--<div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div>-->
+      <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a>-->
+      <!--<a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <span id="SalaryAmount">$0 - $200k+</span>
+  <div class="disable-copy-paste slider-marker">
+    <div id="Slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+      <div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div>
+      <a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a>
+      <a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
