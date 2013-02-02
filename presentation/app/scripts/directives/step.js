@@ -7,8 +7,8 @@ presentationApp.directive('step', function () {
     link: function (scope, element, attrs, slideController) {
       var stepNr = parseInt(attrs.step) || slideController.nextStepNr();
       scope.$watch("currentSlide", function () {
-        var onCurrentSlide = slideController.slideIsShown() && stepNr <= (scope.currentSlide * 10) % 10;
-        element.css('visibility', onCurrentSlide ? 'visible' : 'hidden');
+        var stepIsVisible = slideController.slideNr * 10 + stepNr <= scope.currentSlide * 10;
+        element.css('visibility', stepIsVisible ? 'visible' : 'hidden');
       });
     }
   };

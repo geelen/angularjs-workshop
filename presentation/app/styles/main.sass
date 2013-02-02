@@ -99,13 +99,17 @@ footer
 
 ul
   text-align: left
+  &.thin
+    width: 70%
+    margin: 0 auto
 
 li
   +lato
   display: block
   padding: 10px 10px 10px 20px
   border-left: 5px solid rgba(58, 53, 32, 0.9)
-  .status
+  &.ticked::before
+    content: '✔'
     position: absolute
     margin-left: -70px
 

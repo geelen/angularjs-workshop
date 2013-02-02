@@ -11,20 +11,16 @@ presentationApp.directive('slide', function () {
     scope: true,
     controller: function ($scope) {
       // give each instance of this controller a new ID
-      var slideId = slideCount++;
+      var slideNr = this.slideNr = slideCount++;
 
       $scope.slideClass = function () {
-        var cmp = Math.floor(slideId) - Math.floor($scope.currentSlide);
+        var cmp = Math.floor(slideNr) - Math.floor($scope.currentSlide);
         return {
           prev: cmp === -1,
           current: cmp === 0,
           next: cmp === 1,
           hidden: cmp < -1 || cmp > 1
         }
-      };
-      // sub directives just need to check whether the slide is invisible
-      this.slideIsShown = function () {
-        return !$scope.slideClass.hidden;
       };
 
       // sub directives can get their step number from us
