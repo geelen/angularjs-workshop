@@ -1,6 +1,8 @@
 <!--<div class='tiles'>-->
-  <!--<img ng-repeat="gif in gifs" ng-src='{{gif}}'>-->
+<!--<img ng-repeat="gif in gifs" ng-src='{{gif}}'>-->
 <!--</div>-->
 
-<div id="stage" style="background-image: url({{currentGif}})">
+<div ng-controller="MainController">
+  <div id="stage" ng-style="{background_image: 'url(' + currentGif + ')'}">
+  </div>
 </div>

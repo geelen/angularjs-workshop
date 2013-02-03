@@ -35,3 +35,6 @@ Pitfalls
 
 - ng-src/ng-href
 - Forgetting to use $apply (e.g. setTimeout)
+- ng-include needs quotes
+- ng-style needs underscores instead of dashes
+
