@@ -18,14 +18,4 @@ describe('my app', function() {
     expect(element('[ng-view] .slide.current').text()).toMatch(/Glen Maddern/);
   });
 
-  it('should respond to keyboard input', function() {
-    //); angular.scenario.Future element('document').query(function(d) { console.log(d.trigger('keydown')); });
-    element('#stage').query(function(d, done) {
-      console.log(d);
-      window.d = d;
-      d.trigger('keydown', {keyIdentifier: 'Right'}); done()
-    });
-    pause();
-  });
-
 });
