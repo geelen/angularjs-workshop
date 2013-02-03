@@ -5,12 +5,14 @@
   <body ng-controller="BodyController">
     <input ng-model='name' size='20'>
     <p>Hi there, {{name}}</p>
-    <!--<a href ng-click="resetName()">Reset</a>-->
+    <a ng-click="changeName()">That's not right...</a>
 
     <script>
       var BodyController = function($scope) {
         $scope.name = "Mr Manager";
-//        $scope.resetName = function() { $scope.name = "Mr Manager"; };
+        $scope.changeName = function () {
+          $scope.name = "Manager";
+        }
       };
     </script>
   </body>

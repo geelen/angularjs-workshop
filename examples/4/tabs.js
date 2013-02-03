@@ -1,11 +1,11 @@
 var TabController = function($scope) {
-  $scope.currentTab = 1;
+  var selectedTab = 1;
 
-  $scope.tabSelected = function(index) {
-    return index === $scope.currentTab;
+  $scope.tabClass = function (tabNr) {
+    return { active: tabNr == selectedTab };
   };
 
-  $scope.selectTab = function(index) {
-    $scope.currentTab = index;
+  $scope.selectTab = function(tabNr) {
+    selectedTab = tabNr;
   }
 };

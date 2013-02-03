@@ -1,28 +1,37 @@
 var app = angular.module('twitterFilters', []);
-
 app.controller('TwitterController', function ($scope, $http) {
-  $scope.search = function () {
+  $scope.submitSearch = function () {
     $http.jsonp(
       "http://search.twitter.com/search.json?q=" +
-      $scope.searchTerm +
-      "&callback=JSON_CALLBACK"
+        $scope.searchTerm +
+        '&callback=JSON_CALLBACK'
     ).success(function (data) {
-      $scope.results = data.results;
-    });
-  }
-
+        $scope.results = data.results;
+      })
+  };
   $scope.searchTerm = 'angularjs';
-  $scope.search();
+  $scope.submitSearch();
 });
 
-app.filter('parseDate', function() {
-  return function(input) {
-    return new Date(input);
+app.filter('toDate', function () {
+  return function (dateString) {
+    return new Date(dateString);
   };
 });
 
-app.filter('timeAgo', function() {
-  return function(input) {
-    return (new Date - new Date(input)) / (60 * 1000);
+app.filter('timeAgo', function () {
+  return function (dateString) {
+    return (new Date - new Date(dateString)) / (60 * 1000);
   };
 });
+
+
+
+
+
+
+
+
+
+
+

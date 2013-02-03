@@ -1,11 +1,11 @@
 var TwitterController = function ($scope, $http) {
-  $scope.search = function () {
+  $scope.submitSearch = function () {
     $http.jsonp(
       "http://search.twitter.com/search.json?q=" +
-      $scope.searchTerm +
-      "&callback=JSON_CALLBACK"
+        $scope.searchTerm +
+        '&callback=JSON_CALLBACK'
     ).success(function (data) {
-      $scope.results = data.results;
-    });
-  }
+        $scope.results = data.results;
+      })
+  };
 };

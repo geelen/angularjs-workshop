@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html ng-app>
-  <head>
-    <meta charset="utf-8" />
-    <link rel='stylesheet' href="../foundation.css">
-    <script src="../angular.js"></script>
-    <script src="twitter.js"></script>
-  </head>
-  <body>
-    <div ng-controller="TwitterController">
-      <form ng-submit='search()'>
-        <label>Search for something:</label>
-        <input ng-model="searchTerm">
-        <button type="submit" class='cta-button'>Go!</button>
-      </form>
-      <label>Filter By:</label><input ng-model="filterText">
-      <table ng-show='results'>
-        <tr ng-repeat='result in results | filter:filterText'>
-          <td>@{{ result.from_user }}</td>
-          <td>{{ result.text }}</td>
-        </tr>
-      </table>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8"/>
+  <link rel='stylesheet' href="../foundation.css">
+  <script src="../angular.js"></script>
+  <script src="twitter.js"></script>
+</head>
+<body>
+<div ng-controller="TwitterController">
+  <form ng-submit='submitSearch()'>
+    <label>Search twitter!</label>
+    <input ng-model="searchTerm">
+    <button>Go!</button>
+  </form>
+  <input ng-model="filterTerm">
+  <table>
+    <thead>
+    <tr>
+      <td>Username</td>
+      <td>Tweet</td>
+      <td>Time</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat='result in results | filter:filterTerm'>
+      <td>{{ result.from_user }}</td>
+      <td>{{ result.text }}</td>
+      <td>{{ result.created_at }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
 </html>

@@ -16,10 +16,12 @@
 </head>
 <body>
 <div ng-controller="MyCtrl">
-  <button runaway class='runaway' ng-click='clicked()'>
+  <h5>{{ message }}</h5>
+  <button class='runaway'
+          run-away
+          ng-click='clickedIt()'>
     Click me!
   </button>
-  <h5>{{ message }}</h5>
 </div>
 </body>
 </html>
