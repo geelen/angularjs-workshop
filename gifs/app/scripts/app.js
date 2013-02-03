@@ -5,7 +5,7 @@ var gifsApp = angular.module('gifsApp', [])
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainController'
       })
       .otherwise({
         redirectTo: '/'
