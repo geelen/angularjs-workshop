@@ -17,13 +17,8 @@ Add some more slides, demonstrate show/hiding working.
 Add keyboard control - inject $document into the controller and bind key events to it.
 Add controller tests.
 
-Start an end-to-end test.
-Copy the base testacular config to testacular.e2e.conf
-rm -rf ~/.npm/testacular
-sudo npm install -g testacular
-kill yeoman server
-yeoman build
-cd dist
-../test/vendor/web-server.js
-
-testacular start testacular.e2e.conf
+End-to-end testing
+Talk about how testacular is just starting to support it but it doesn't yet work within Yeoman (but once there's a generator, jump on that shit)
+Make a directory in the app called /test
+Download angular-scenario.js and runner.html into it
+Create a file called navigation.js
