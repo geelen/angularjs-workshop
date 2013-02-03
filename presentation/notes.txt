@@ -27,6 +27,8 @@ Test the previous/next buttons
 
 Add keyboard control - inject $document into the controller and bind key events to it.
 
+http://api.tumblr.com/v2/blog/dvdp.tumblr.com/posts?api_key=MzOPX3SNf2sIvdWg2DQvdaDGbw8VbfRz3vPeImWwvBCJ2Q7fzn&callback=JSON_CALLBACK
+/http[^"]*?\.gif/
 
 
 Pitfalls
