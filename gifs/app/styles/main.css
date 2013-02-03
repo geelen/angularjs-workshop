@@ -23,3 +23,15 @@ body {
     box-shadow: 0 0 200px 20px rgba(255,255,255,0.5);
     overflow: hidden;
 }
+
+header {
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    left: 0;
+    position: fixed;
+    font-size: 24px;
+    background-color: #777;
+}

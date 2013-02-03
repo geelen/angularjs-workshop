@@ -11,4 +11,8 @@ gifsApp.controller('MainController',
         $scope.currentGif = newGif;
       });
     });
+
+    $scope.$on('tumblrAdded', function (evt, newTumblr) {
+      console.log('Main got ' + newTumblr);
+    })
   });

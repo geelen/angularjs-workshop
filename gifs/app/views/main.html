@@ -2,6 +2,12 @@
 <!--<img ng-repeat="gif in gifs" ng-src='{{gif}}'>-->
 <!--</div>-->
 
+<header ng-controller="HeaderController">
+  <form ng-submit='addTumblr()'>
+    <label>Add a new tumblr: </label>
+    <input type="text" ng-model="submission">.tumblr.com
+  </form>
+</header>
 <div ng-controller="MainController">
   <div id="stage" ng-style="{background_image: 'url(' + currentGif + ')'}">
   </div>
