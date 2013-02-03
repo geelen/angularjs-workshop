@@ -34,7 +34,7 @@ http://api.tumblr.com/v2/blog/dvdp.tumblr.com/posts?api_key=MzOPX3SNf2sIvdWg2DQv
 Pitfalls
 
 - ng-src/ng-href
-- Forgetting to use $apply (e.g. setTimeout)
+- Forgetting to use $apply (e.g. setTimeout, custom events)
 - ng-include needs quotes
 - ng-style needs underscores instead of dashes
 - $watch needs to observe a primitive
