@@ -226,7 +226,7 @@
   slide
     h3 Filters
     snippet(lang='html', file='examples/6/twitter-filters.html')
-    snippet(lang='html', file='examples/6/twitter-filters.js')
+    snippet(lang='js', file='examples/6/twitter-filters.js')
 
   slide
     h1 Directives
@@ -238,6 +238,46 @@
       li Are where your DOM manipulation goes
 
   slide
+    h3 Directives
+      snippet(lang='html', file='examples/7/directives.html')
+      snippet(lang='js', file='examples/7/directives.js')
+
+  slide
+    h3 Directives recap
+    p Simple Version
+      snippet(lang='js', file='examples/7/directives-snippet-simple.js')
+      p.sub assumes
+      snippet(lang='js', file='examples/7/directives-snippet-simple.html')
+
+  slide
+    h3 Directives recap
+    p Slightly expanded
+      snippet(lang='js', file='examples/7/directives-snippet-expanded.js')
+      snippet(lang='js', file='examples/7/directives-snippet-expanded.html')
+
+  slide
+    h3 Restrict options
+    ul
+      li
+        code.inline restrict: A
+        | (default) works with
+        code.inline #{ "<div directive-name='something'>" }
+      li
+        code.inline restrict: E
+        | works with
+        code.inline #{ "<directive-name>" }
+      li
+        code.inline restrict: C
+        | works with
+        code.inline #{ "<div class='directive-name'>" }
+      li
+        code.inline restrict: M
+        | works with
+        code.inline #{ "<!-- directive: something -->" }
+
+  slide
+    h3 Challenge: Code snippet + iframe
+
   slide
   slide
   slide

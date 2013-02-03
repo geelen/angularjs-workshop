@@ -181,7 +181,7 @@
   <slide>
     <h3>Filters</h3>
     <snippet lang="html" file="examples/6/twitter-filters.html"></snippet>
-    <snippet lang="html" file="examples/6/twitter-filters.js"></snippet>
+    <snippet lang="js" file="examples/6/twitter-filters.js"></snippet>
   </slide>
   <slide>
     <h1>Directives</h1>
@@ -191,7 +191,39 @@
       <li>Are where your DOM manipulation goes</li>
     </ul>
   </slide>
-  <slide></slide>
+  <slide>
+    <h3>Directives
+      <snippet lang="html" file="examples/7/directives.html"></snippet>
+      <snippet lang="js" file="examples/7/directives.js"></snippet>
+    </h3>
+  </slide>
+  <slide>
+    <h3>Directives recap</h3>
+    <p>Simple Version
+      <snippet lang="js" file="examples/7/directives-snippet-simple.js"></snippet>
+      <p class="sub">assumes</p>
+      <snippet lang="js" file="examples/7/directives-snippet-simple.html"></snippet>
+    </p>
+  </slide>
+  <slide>
+    <h3>Directives recap</h3>
+    <p>Slightly expanded
+      <snippet lang="js" file="examples/7/directives-snippet-expanded.js"></snippet>
+      <snippet lang="js" file="examples/7/directives-snippet-expanded.html"></snippet>
+    </p>
+  </slide>
+  <slide>
+    <h3>Restrict options</h3>
+    <ul>
+      <li><code class="inline">restrict: A</code>(default) works with<code class="inline">&lt;div directive-name='something'&gt;</code></li>
+      <li><code class="inline">restrict: E</code>works with<code class="inline">&lt;directive-name&gt;</code></li>
+      <li><code class="inline">restrict: C</code>works with<code class="inline">&lt;div class='directive-name'&gt;</code></li>
+      <li><code class="inline">restrict: M</code>works with<code class="inline">&lt;!-- directive: something --&gt;</code></li>
+    </ul>
+  </slide>
+  <slide>
+    <h3>Challenge: Code snippet + iframe</h3>
+  </slide>
   <slide></slide>
   <slide></slide>
   <slide>
