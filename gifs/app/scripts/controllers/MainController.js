@@ -1,12 +1,14 @@
 'use strict';
 
-gifsApp.controller('MainController', function ($scope, $http, Fetcher) {
-  var allGifs = ['http://project.wnyc.org/elections/patchwork-vote-co/images/spinner.gif'];
+gifsApp.controller('MainController', function ($scope, $http, $timeout, Fetcher) {
+  var allGifs = [];
+  $scope.currentGif = 'http://project.wnyc.org/elections/patchwork-vote-co/images/spinner.gif';
 
   var chooseRandomGif = function() {
-    $scope.currentGif = allGifs[Math.floor(Math.random() * allGifs.length)]
+    console.log("choosing!")
+    $scope.currentGif = allGifs[Math.floor(Math.random() * allGifs.length)];
+    $timeout(chooseRandomGif, 1000);
   };
-  chooseRandomGif();
 
   Fetcher.fetch().then(function (gifs) {
     allGifs = gifs;
