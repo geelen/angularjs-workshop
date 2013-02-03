@@ -38,3 +38,4 @@ Pitfalls
 - ng-include needs quotes
 - ng-style needs underscores instead of dashes
 - $watch needs to observe a primitive
+- yeoman needs some special config for production
