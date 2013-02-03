@@ -6,9 +6,10 @@ app.service('MyService', function() {
 });
 
 app.factory('MyFactory', function() {
-  this.is = Math.random();
   console.log("Factory");
-  return function()
+  return {
+    is: Math.random()
+  }
 });
 
 app.controller("myController", function($scope, MyService, MyFactory) {
