@@ -1,0 +1,14 @@
+Testing
+
+Generate an angular project with Yeoman
+Generate a directive called Snippet
+Put our snippet code in there, test it
+
+Then start fleshing out our application - show what Yeoman has provided us
+Talk about $routeProvider, how it works with ng-view. Mention $routeParams
+
+Then put in some HTML slides, show transclusion
+Then we have to hide some of the slides - do it using ids on the slide element, and a global currentSlide value
+Show that changing the currentSlide value changes the visible slide
+Add keyboard control - inject $document into the controller and bind key events to it
+Test that the controller changes currentSlide
