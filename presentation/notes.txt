@@ -4,11 +4,17 @@ Generate an angular project with Yeoman
 Generate a directive called Snippet
 Put our snippet code in there, test it
 
-Then start fleshing out our application - show what Yeoman has provided us
-Talk about $routeProvider, how it works with ng-view. Mention $routeParams
+Then start fleshing out our application - show what Yeoman has provided us by default.
+Generate a Controller called Main.
+Talk about $routeProvider, how it works with ng-view. Mention how there's no in-built support for transitions between states, but people are working on that.
+Talk about how the Goodfilms app uses an outer structure that is totally fixed, with one main window with an ng-view on it.
+Show using <script type='text/ng-template' id='/views/main.html'>
 
-Then put in some HTML slides, show transclusion
-Then we have to hide some of the slides - do it using ids on the slide element, and a global currentSlide value
-Show that changing the currentSlide value changes the visible slide
-Add keyboard control - inject $document into the controller and bind key events to it
-Test that the controller changes currentSlide
+Then put in a HTML slide, show transclusion. Test that it works.
+Add the ability to show/hide the slides based on a scope variable. Test that.
+
+Add some more slides, demonstrate show/hiding working.
+Add keyboard control - inject $document into the controller and bind key events to it.
+Add controller tests.
+
+Start and end-to-end test.
