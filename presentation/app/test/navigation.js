@@ -18,4 +18,23 @@ describe('my app', function() {
     expect(element('[ng-view] .slide.current').text()).toMatch(/Glen Maddern/);
   });
 
+  it('should be able to navigate', function() {
+    element('.next').click();
+    element('.next').click();
+
+    // viewing slide 3
+    expect(element('[ng-view] .slide:first').attr('class')).toMatch(/hidden/);
+    expect(element('[ng-view] .slide:nth-of-type(3)').attr('class')).toMatch(/current/);
+    expect(element('[ng-view] .slide.current').count()).toBe(1);
+    expect(element('[ng-view] .slide.current').text()).toMatch(/This course/);
+
+    element('.prev').click();
+    // viewing slide 2
+    expect(element('[ng-view] .slide:first').attr('class')).toMatch(/prev/);
+    expect(element('[ng-view] .slide:nth-of-type(2)').attr('class')).toMatch(/current/);
+    expect(element('[ng-view] .slide:nth-of-type(3)').attr('class')).toMatch(/next/);
+    expect(element('[ng-view] .slide.current').count()).toBe(1);
+    expect(element('[ng-view] .slide.current').text()).toMatch(/Who am I/);
+  });
+
 });
