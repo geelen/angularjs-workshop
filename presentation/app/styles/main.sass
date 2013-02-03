@@ -181,3 +181,32 @@ iframe
   margin-top: 20px
   padding-top: 20px
 
+.next, .prev
+  position: absolute
+  height: 100%
+  width: 80px
+  opacity: 0
+  top: 0
+  display: block
+  background: rgba(white, 0.5)
+  font-size: 80px
+  padding: 40% 20px 0
+  z-index: 10
+  +transition(opacity 0.3s)
+  &::before
+    position: absolute
+    height: 80px
+    margin-top: -40px
+    top: 50%
+  &:hover
+    opacity: 1
+
+.prev
+  left: 0
+  &::before
+    content: '<'
+
+.next
+  &::before
+    content: '>'
+  right: 0

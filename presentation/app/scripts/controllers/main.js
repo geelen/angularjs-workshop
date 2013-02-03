@@ -20,4 +20,11 @@ presentationApp.controller('MainCtrl', function ($scope, $location, Keyboard) {
   Keyboard.on("Up", function() {
     setCurrentSlide($scope.currentSlide - 0.1);
   });
+
+  $scope.clickNext = function() {
+    setCurrentSlide(Math.floor($scope.currentSlide + 1) + 0.9);
+  }
+  $scope.clickPrev = function() {
+    setCurrentSlide(Math.floor($scope.currentSlide - 1) + 0.9);
+  }
 });
