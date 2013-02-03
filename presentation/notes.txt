@@ -14,7 +14,7 @@ Then put in a HTML slide, show transclusion. Test that it works.
 Add the ability to show/hide the slides based on a scope variable. Test that.
 
 Add some more slides, demonstrate show/hiding working.
-Add keyboard control - inject $document into the controller and bind key events to it.
+Add next/prev buttons
 Add controller tests.
 
 End-to-end testing
@@ -22,3 +22,13 @@ Talk about how testacular is just starting to support it but it doesn't yet work
 Make a directory in the app called /test
 Download angular-scenario.js and runner.html into it
 Create a file called navigation.js
+Test the default routing
+Test the previous/next buttons
+
+Add keyboard control - inject $document into the controller and bind key events to it.
+
+
+
+Pitfalls
+
+- Forgetting to use $apply (e.g. setTimeout)
