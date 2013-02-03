@@ -1,11 +1,11 @@
 'use strict';
 
-gifsApp.service('RandomChooser', function ($timeout) {
+gifsApp.service('RandomChooser', function ($timeout, Tumblrs) {
   var speed = 3000;
 
-  this.chooseRandomly = function (all, callback) {
+  this.chooseRandomly = function (callback) {
     var loopFn = function () {
-      callback(all[Math.floor(Math.random() * all.length)]);
+      callback(Tumblrs.allGifs[Math.floor(Math.random() * Tumblrs.allGifs.length)]);
       $timeout(loopFn, speed);
     };
 
