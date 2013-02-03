@@ -1,0 +1,343 @@
+.prev(ng-click='clickPrev()')
+.next(ng-click='clickNext()')
+
+#stage
+  slide
+    img.poster(src='http://angularftw.com/images/angularjsftw_logo.png')
+    footer.profile
+      p.sub by
+      .image
+      p Glen Maddern
+      a(href='http://twitter.com/glenmaddern') @glenmaddern
+      | |
+      a(href='http://goodfil.ms')  http://goodfil.ms
+      | |
+      a(href='mailto://glen@goodfil.ms')  glen@goodfil.ms
+
+  slide
+    h1 Who am I
+    p.sub anyway?
+    ul
+      li(step) Co-founder of <strong>Goodfilms</strong> (http://goodfil.ms)
+      li(step) A <strong>once-reluctant, now enthusiastic</strong> web-developer.
+      li(step) Built the <strong>Goodfilms mobile site</strong> in Angular in mid-2011.
+      li(step) Have been using AngularJS for <strong>side-projects ever since</strong>.
+      li(step) Built an <strong>interactive movie graph</strong> in Angular + D3js late last year.
+      li(step) Presented Angular at <strong>Melbourne Ruby, MelbJS & SydJS</strong>.
+      li(step) Someone who wants <strong>everyone to be using AngularJS</strong>.
+
+  slide
+    h1 This course
+    p.sub will cover
+    ul
+      li(step) The <strong>AngularJS philosophy</strong> & introduction to the <strong>core concepts</strong>.
+      li(step) How to use <strong>Directives & Filters</strong> to defeat your enemies.
+      li(step) Scaffolding an app with <strong>Yeoman</strong> to reduce boilerplate to 0.
+      li(step) The <strong>ease of testing</strong> your app at both unit & end-to-end levels.
+      li(step) <strong>Communicating between controllers</strong> and handling global state.
+      li(step) Decomposing your application into <strong>Services & Factories</strong>
+      li(step) Understanding how Angular's <strong>dependency injection</strong> wires everything up.
+      li(step) How to resolve <strong>common pitfalls</strong> to avoid rage.
+
+  slide
+    h1 Why angular?
+    ul
+      li.ticked(step) it <strong>solves</strong> a problem well
+      li.ticked(step) it's <strong>fast</strong> for small apps
+      li.ticked(step) it's <strong>maintainable</strong> for large apps
+
+  slide
+    h1 Learning Angular
+    p.sub has 3 phases
+  slide
+    img.big(src='http://2.bp.blogspot.com/-q5aZsORjuwY/T1cJj5FZWWI/AAAAAAAAAOw/EkdsgmMb1FA/s1600/tumblr_lw4m1p8G5J1qzzh6g.jpg')
+    h1 WHOA
+  slide
+    img.big(src='http://www.thinkgeek.com/images/blog/khaaaan.jpg')
+    h1 ANGULAAARRRR
+  slide
+    img.big(src='http://media.npr.org/assets/img/2012/11/20/macklemore-thrift-shop-still_wide-7d4092008474938959d2a80d3216271a0a15e65c-s6-c10.jpg')
+    h1 AWW HELL YEAH
+
+  slide
+    h1 Philosophy
+
+  slide
+    h1 Angular
+    ul.thin
+      li(step) is a <strong>framework</strong> for building web applications.
+      li(step) is an <strong>extension</strong> to HTML and browsers.
+      li(step) asks "What would HTML look like if it was designed for <strong>applications</strong>, not documents?"
+      li(step) asks "How would <strong>the browser</strong> behave in that case?"
+      li(step) is an <strong>alternative</strong> to Backbone / Ember / Knockout.
+      li(step) is an <strong>alternative</strong> to jQuery.
+      li(step) is something <strong>new</strong>.
+
+  slide
+    h1 HTML
+    h3 is your templating language
+
+  slide
+    pre
+      code(data-language='html') #{ '<html ng-app>' }
+    pre
+      code(data-language='html') #{ '<input ng-model=...' }
+    pre
+      code(data-language='html') #{ '<a ng-click=...' }
+    pre
+      code(data-language='html') #{ '<div ng-show=...' }
+
+  slide
+    h3 The jQuery way
+    pre
+      code(data-language='html') #{ "<a class='close' ..."}
+    pre
+      code(data-language='js') #{ "$('a.close').click(function( ..." }
+
+  slide
+    h3 The AngularJS alternative
+    pre
+      code(data-language='html') #{ "<a ng-click='close()' ..."}
+    pre
+      code(data-language='js') #{ "$scope.close = function( ... " }
+    h3(step) is very different from
+    pre(step='1')
+      code(data-language='html') #{ "<a onclick='close()' ..."}
+    pre(step='1')
+      code(data-language='js') #{ "var close = function( ... " }
+
+  slide
+    h3 Interpolation is
+    h2 {{ "{" + "{ easy }" + "}" }}
+
+  slide
+    snippet(lang='html', file='examples/1/basics.html')
+    iframe(src='examples/1/basics.html', step)
+
+  slide
+    h3 Two-way data-binding
+    pre
+      code(data-language='html') #{ "<input ng-model= ..."}
+
+  slide
+    snippet(lang='html', file='examples/2/data-binding.html')
+    iframe(src='examples/2/data-binding.html', step)
+
+  slide
+    h3 Controllers
+    pre
+      code(data-language='html') #{ "<div ng-controller='MyCtrl' ..."}
+    pre
+      code(data-language='js') #{ "var MyCtrl = function($scope, ... " }
+    ul
+      li <strong>Scoped</strong> to a part of the DOM
+      li Should <strong>NEVER</strong> touch the DOM
+      li Instead, it sets values/methods on <code>$scope</code>
+
+  slide
+    snippet(lang='html', file='examples/3/simple-controller.html')
+    iframe(src='examples/3/simple-controller.html', step)
+
+  slide
+    h2 $scope
+    ul
+      li This is a <strong>view-model</strong>
+      li It's a <strong>plain-old-javascript-object</strong>
+      li Change it and the DOM changes, like <strong>magic</strong>
+        sup *
+    footer * causes 90% of the 'WHOA' and 'ANGULAAARRRR' stages
+
+  slide
+    h3 Challenge: tabbed browsing
+    snippet(lang='html', file='examples/4/tabs.html')
+    snippet(lang='js', file='examples/4/tabs.js')
+
+  slide
+    h3 Tabbed browsing recap
+    ul.thin
+      li
+        code.inline ng-class=expr()
+        | expects
+        code.inline expr()
+        | to return either a string or a
+        code.inline { className: truthy, ...
+        | object.
+      li
+        code.inline ng-show=expr()
+        | shows if
+        code.inline expr()
+        | returns true. (There's also an
+        code.inline ng-hide
+        | ).
+
+  slide
+    h3 Challenge: twitter search
+    p.sub introducing...
+    ul.thin
+      li The
+        code.inline ng-repeat
+        | directive
+      li Performing ajax requests with the
+        code.inline $http
+        | service
+      li Using a simple filter
+
+  slide
+    h3 Twitter search
+    snippet(lang='html', file='examples/5/twitter.html')
+    snippet(lang='html', file='examples/5/twitter.js')
+
+  slide
+    h3 Twitter recap
+    ul.thin
+      li
+        code.inline ng-repeat="single in plural"
+        | is incredibly useful.
+      li
+        | adding
+        code.inline | filter:term
+        | to the end lets you instantly filter a list.
+      li
+        code.inline $http.jsonp
+        | requires you to pass a
+        code.inline JSON_CALLBACK
+      li
+        code.inline http://docs.angularjs.org/api
+        | is your friend.
+
+  slide
+    h1 Directives & Filters
+
+  slide
+    h3 First, a new syntax
+    pre
+      code(data-language='html') #{ "<div ng-app='myapp'>"}
+      br
+      code(data-language='html') #{ "  <div ng-controller='MyCtrl' ..."}
+    pre
+      code(data-language='js') angular.module('myapp', [])
+      br
+      code(data-language='js')   .controller('MyCtrl', function($scope, ...
+    p.sub replaces
+    pre
+      code(data-language='html') #{ "<div ng-app>"}
+      br
+      code(data-language='html') #{ "  <div ng-controller='MyCtrl' ..."}
+    pre
+      code(data-language='js') #{ "var MyCtrl = function($scope, ... " }
+
+  slide
+    h3 Filters
+    snippet(lang='html', file='examples/6/twitter-filters.html')
+    snippet(lang='js', file='examples/6/twitter-filters.js')
+
+  slide
+    h1 Directives
+    ul
+      li Define custom HTML elements/attributes
+      li They're how
+        code.inline ng-click
+        | et. al. are implemented
+      li Are where your DOM manipulation goes
+
+  slide
+    h3 Directives
+      snippet(lang='html', file='examples/7/directives.html')
+      snippet(lang='js', file='examples/7/directives.js')
+
+  slide
+    h3 Directives recap
+    p Simple Version
+      snippet(lang='js', file='examples/7/directives-snippet-simple.js')
+      p.sub assumes
+      snippet(lang='js', file='examples/7/directives-snippet-simple.html')
+
+  slide
+    h3 Directives recap
+    p Slightly expanded
+      snippet(lang='js', file='examples/7/directives-snippet-expanded.js')
+      snippet(lang='js', file='examples/7/directives-snippet-expanded.html')
+
+  slide
+    h3 Restrict options
+    ul
+      li
+        code.inline restrict: A
+        | (default) works with
+        code.inline #{ "<div directive-name='something'>" }
+      li
+        code.inline restrict: E
+        | works with
+        code.inline #{ "<directive-name>" }
+      li
+        code.inline restrict: C
+        | works with
+        code.inline #{ "<div class='directive-name'>" }
+      li
+        code.inline restrict: M
+        | works with
+        code.inline #{ "<!-- directive: something -->" }
+
+  slide
+    h3 Challenge: Code snippet + iframe
+
+  slide
+    h1 Testing
+
+  slide
+
+  slide
+
+    h2 Structure
+    img.poster(src='/images/angularjs-structure.png')
+  slide
+    h1 DEMO
+  slide
+    h1 Go be superheroes!
+    ul
+      li Read more at
+        a(href='http://angularjs.org/')  http://angularjs.org/
+        br
+        | do the
+        a(href='http://docs.angularjs.org/tutorial/')  tutorial
+        | , keep the
+        a(href='http://docs.angularjs.org/api/')  api reference
+        | bookmarked.
+      li Watch the introductory and advanced videos on the
+        br
+        a(href='http://www.youtube.com/user/angularjs/videos?view=0') Youtube channel
+        | .
+      li Check out
+        a(href='https://github.com/geelen/melbjs-demo')  the code from tonight's demo
+        | or
+        br
+        a(href='https://github.com/geelen/melbjs-preso')  the code from these slides
+        | (more advanced)
+      li Hit me up on Twitter if you have questions.
+  slide
+    h1 Thank you!
+    .profile
+      p.sub I have been:
+      .image
+      p Glen Maddern
+      a(href='http://twitter.com/glenmaddern') @glenmaddern
+        | |
+      a(href='http://goodfil.ms')  http://goodfil.ms
+        | |
+      a(href='mailto://glen@goodfil.ms')  glen@goodfil.ms
+    p.one-more-thing
+      p.sub also!
+      p I am running a
+        strong  half-day AngularJS workshop
+        br
+        | here in Melbourne on Saturday,
+        strong  9th Feb
+      p It will cost
+        strong  $300
+      p Which is a
+        strong  bargain
+        | because you will learn
+        strong  heaps
+      p Register at
+        a(href='http://angularftw.com/', target='_blank')
+          | angularftw.com

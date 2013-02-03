@@ -1,5 +1,7 @@
-module.exports = function( grunt ) {
+module.exports = function (grunt) {
   'use strict';
+  grunt.loadNpmTasks('grunt-jade');
+
   //
   // Grunt configuration:
   //
@@ -39,8 +41,21 @@ module.exports = function( grunt ) {
       }
     },
 
+    // compile .jade files using jade
+    jade: {
+      html: {
+        src: ['app/views/*.jade'],
+        dest: 'app/views/',
+        options: {
+          client: false,
+          basePath: 'app/jade',
+          pretty: true
+        }
+      }
+    },
+
     // generate application cache manifest
-    manifest:{
+    manifest: {
       dest: ''
     },
 
@@ -55,6 +70,12 @@ module.exports = function( grunt ) {
           'app/styles/**/*.{scss,sass}'
         ],
         tasks: 'compass reload'
+      },
+      jade: {
+        files: [
+          'app/views/*.jade'
+        ],
+        tasks: 'jade'
       },
       reload: {
         files: [

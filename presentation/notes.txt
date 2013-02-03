@@ -1,0 +1,40 @@
+Testing
+
+Generate an angular project with Yeoman
+Generate a directive called Snippet
+Put our snippet code in there, test it
+
+Then start fleshing out our application - show what Yeoman has provided us by default.
+Generate a Controller called Main.
+Talk about $routeProvider, how it works with ng-view. Mention how there's no in-built support for transitions between states, but people are working on that.
+Talk about how the Goodfilms app uses an outer structure that is totally fixed, with one main window with an ng-view on it.
+Show using <script type='text/ng-template' id='/views/main.html'>
+
+Then put in a HTML slide, show transclusion. Test that it works.
+Add the ability to show/hide the slides based on a scope variable. Test that.
+
+Add some more slides, demonstrate show/hiding working.
+Add next/prev buttons
+Add controller tests.
+
+End-to-end testing
+Talk about how testacular is just starting to support it but it doesn't yet work within Yeoman (but once there's a generator, jump on that shit)
+Make a directory in the app called /test
+Download angular-scenario.js and runner.html into it
+Create a file called navigation.js
+Test the default routing
+Test the previous/next buttons
+
+Add keyboard control - inject $document into the controller and bind key events to it.
+
+http://api.tumblr.com/v2/blog/dvdp.tumblr.com/posts?api_key=MzOPX3SNf2sIvdWg2DQvdaDGbw8VbfRz3vPeImWwvBCJ2Q7fzn&callback=JSON_CALLBACK
+/http[^"]*?\.gif/
+
+
+Pitfalls
+
+- ng-src/ng-href
+- Forgetting to use $apply (e.g. setTimeout)
+- ng-include needs quotes
+- ng-style needs underscores instead of dashes
+- $watch needs to observe a primitive
