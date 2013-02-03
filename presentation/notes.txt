@@ -17,4 +17,13 @@ Add some more slides, demonstrate show/hiding working.
 Add keyboard control - inject $document into the controller and bind key events to it.
 Add controller tests.
 
-Start and end-to-end test.
+Start an end-to-end test.
+Copy the base testacular config to testacular.e2e.conf
+rm -rf ~/.npm/testacular
+sudo npm install -g testacular
+kill yeoman server
+yeoman build
+cd dist
+../test/vendor/web-server.js
+
+testacular start testacular.e2e.conf
