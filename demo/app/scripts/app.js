@@ -1,13 +1,13 @@
 'use strict';
 
 var demoApp = angular.module('demoApp', [])
-  .config(['$routeProvider', function($routeProvider) {
+  .config(function($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/:slideNr', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
-  }]);
+  });

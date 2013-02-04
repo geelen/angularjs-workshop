@@ -1,1 +1,7 @@
 /* Will be compiled down to a single stylesheet with your sass files */
+
+.slide {
+    text-align: center;
+    padding: 100px;
+    background-color: #daa520;
+}

@@ -1,9 +1,19 @@
-<div class="hero-unit">
-  <h1>Cheerio!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<h1>{{ message }}</h1>
+
+<div id="stage">
+  <slide>
+    <h1>Welcome to Angular</h1>
+    <p>It's great!</p>
+  </slide>
+  <slide>
+    <h1>My name is Glen</h1>
+    <p>I'm ok!</p>
+  </slide>
+  <slide>
+    <h1>Thanks for listening!</h1>
+    <p>You are great too.</p>
+  </slide>
 </div>
+
+<a ng-click='goPrev()'>Prev</a>
+<a ng-click='goNext()'>Next</a>
