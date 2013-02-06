@@ -17,14 +17,14 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-        
+
         <!--[if lt IE 9]>
             <script src="scripts/vendor/es5-shim.min.js"></script>
             <script src="scripts/vendor/json3.min.js"></script>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="container" ng-view></div>
+        <div class="container" ng-include="'views/main.html'"></div>
 
         <script src="scripts/vendor/angular.js"></script>
 
@@ -32,6 +32,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/Fetcher.js"></script>
+        <script src="scripts/controllers/Header.js"></script>
+        <script src="scripts/services/GifLibrary.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

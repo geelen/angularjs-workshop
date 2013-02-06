@@ -1,3 +1,12 @@
-<div class="hero-unit">
-  <img ng-repeat='gif in gifs' ng-src='{{gif}}'>
+<header ng-controller='HeaderCtrl'>
+  <form ng-submit='addTumblr()'>
+    <label>Add tumblr:</label>
+    <input ng-model="tumblrName">
+    <button type="submit">Go!</button>
+  </form>
+</header>
+
+<div ng-controller='MainCtrl'>
+  <p ng-repeat='gif in gifs'> {{gif}} </p>
+  <div ng-click='doSomething($event)'></div>
 </div>

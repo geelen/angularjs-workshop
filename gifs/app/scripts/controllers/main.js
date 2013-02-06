@@ -1,12 +1,13 @@
 'use strict';
 
-gifsApp.controller('MainCtrl', function($scope, $http, Fetcher) {
-  $scope.gifs = [];
+(function (gifsApp) {
 
-  Fetcher.fetch('dvdp').then(function (gifs) {
-    $scope.gifs = $scope.gifs.concat(gifs);
-  });
-  Fetcher.fetch('simpsonsgifs').then(function (gifs) {
-    $scope.gifs = $scope.gifs.concat(gifs);
-  });
-});
+  gifsApp.controller('MainCtrl', function ($scope, $http, GifLibrary, $document) {
+    $scope.gifs = [];
+
+    GifLibrary.addTumblr('dvdp');
+    $scope.gifs = GifLibrary.allGifs;
+
+  })
+
+})(angular.module('gifsApp'));
