@@ -1,5 +1,3 @@
 'use strict';
 
-(function () {
-  var gifsApp = angular.module('gifsApp', []);
-})();
+var gifsApp = angular.module('gifsApp', []);
