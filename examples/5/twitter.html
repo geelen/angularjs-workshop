@@ -8,27 +8,17 @@
 </head>
 <body>
 <div ng-controller="TwitterController">
-  <form ng-submit='submitSearch()'>
-    <label>Search twitter!</label>
+  <form ng-submit='performSearch()'>
     <input ng-model="searchTerm">
-    <button>Go!</button>
+    <input ng-model="filterTerm">
+    <button type="submit">Go!</button>
   </form>
-  <input ng-model="filterTerm">
   <table>
-    <thead>
-    <tr>
-      <td>Username</td>
-      <td>Tweet</td>
-      <td>Time</td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat='result in results | filter:filterTerm'>
+    <tr ng-repeat='result in data.results | filter:filterTerm'>
       <td>{{ result.from_user }}</td>
       <td>{{ result.text }}</td>
       <td>{{ result.created_at }}</td>
     </tr>
-    </tbody>
   </table>
 </div>
 </body>
