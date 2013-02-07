@@ -41,13 +41,12 @@ Again, run `yeoman server` and hit `http://localhost:3502/` to see the code work
 - https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en - the AngularJS Batarang Chrome Extension
 - http://builtwith.angularjs.org/ - real world AngularJS apps
 
-## Worthwhile blog posts
+### Worthwhile blog posts
 
 - http://blog.appfog.com/angularjs-the-beauty-of-concision/
 - http://www.yearofmoo.com/2012/10/more-angularjs-magic-to-supercharge-your-webapp.html
 - http://blog.akquinet.de/2013/01/22/maintainable-rich-web-applications-with-angularjs/
 - http://dailyjs.com/2012/11/08/angularjs-pitfalls/
-- 
 
 ## Feedback form
 
