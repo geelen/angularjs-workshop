@@ -37,3 +37,13 @@ Again, run `yeoman server` and hit `http://localhost:3502/` to see the code work
 - http://docs.angularjs.org/guide/directive - bookmark this
 - http://docs.angularjs.org/api/ - keep this open for the rest of your life
 - http://egghead.io/ - every one of these videos is great
+
+## Feedback form
+
+If you've got a few minutes, would you mind filling out an [anonymous feedback form](https://docs.google.com/forms/d/1wuMNeQyPQZW9mZKsZTEtAbY6_6mkQq_RMdWptcqavLk/viewform)
+on the course so I can improve it in future?
+
+## Questions?
+
+If you have an AngularJS question, please get in touch. Best way is through twitter - I'm [@glenmaddern](http://twitter.com/glenmaddern).
+
