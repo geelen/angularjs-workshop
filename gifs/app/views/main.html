@@ -1,9 +1,11 @@
-<div class="hero-unit">
-  <h1>Cheerio!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<header>
+  <form>
+    <label>Add tumblr:</label>
+    <input>
+    <button type="submit">Go!</button>
+  </form>
+</header>
+
+<div ng-controller='MainCtrl'>
+  <img ng-repeat='gif in gifs' ng-src='{{gif}}'>
 </div>
