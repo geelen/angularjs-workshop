@@ -1,9 +1,5 @@
 'use strict';
 
 presoApp.controller('MainCtrl', function($scope) {
-  $scope.awesomeThings = [
-    'HTML5 Boilerplate',
-    'AngularJS',
-    'Testacular'
-  ];
+  $scope.currentSlide = 1;
 });
