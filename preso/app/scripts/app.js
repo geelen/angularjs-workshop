@@ -7,6 +7,10 @@ var presoApp = angular.module('presoApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/help', {
+        templateUrl: 'views/help.html',
+        controller: 'HelpCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
