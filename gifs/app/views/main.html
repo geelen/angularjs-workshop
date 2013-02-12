@@ -1,7 +1,7 @@
-<header>
-  <form>
+<header ng-controller='HeaderCtrl'>
+  <form ng-submit='addGifs()'>
     <label>Add tumblr:</label>
-    <input>
+    <input ng-model='newTumblrName'>
     <button type="submit">Go!</button>
   </form>
 </header>
