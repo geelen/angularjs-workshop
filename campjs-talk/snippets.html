@@ -1,0 +1,48 @@
+
+<form class="pure-form" ng-controller="DemoCtrl">
+  <label>
+    What's your name?
+    <input type="text" ng-model='name'/>
+  </label>
+  <button class="pure-button pure-button-primary"
+          ng-click='resetName()'>Reset!</button>
+  <h4>Hi there, {{ name }}</h4>
+</form>
+
+
+    function DemoCtrl($scope) {
+      $scope.name = 'Glen';
+
+      $scope.resetName = function() {
+        $scope.name = undefined;
+      }
+    }
+
+<form class="pure-form">
+  <label>
+    Filter by:
+    <input type="text" ng-model='filter'/>
+  </label>
+</form>
+
+<table class="pure-table">
+  <thead>
+  <tr>
+    <td>Project name</td>
+    <td>Num stars</td>
+    <td>Num watchers</td>
+  </tr>
+  </thead>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+function DemoCtrl($scope, $http) {
+  $http.get('data/geelen-repos.json')
+    .success(function(data) {
+      console.log(data);
+    });
+}
