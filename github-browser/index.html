@@ -1,18 +1,21 @@
 <html ng-app>
 <head>
   <title>Angular FTW</title>
-  <link rel="stylesheet" href="bower_components/pure/src/base/css/"/>
+  <link rel="stylesheet" href="pure-min.css"/>
+  <link rel="stylesheet" href="app.css"/>
 </head>
 <body>
 
-
-
 <h1>Welcome to Angular FTW</h1>
 
-1 + 2 = {{ 1 + 2 }}
+<form class="pure-form">
+  <label>
+    What is your name?
+    <input type="text" ng-model="name"/>
+  </label>
+</form>
 
-
-
+<h2>Your name is {{ name }}</h2>
 
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 </body>
