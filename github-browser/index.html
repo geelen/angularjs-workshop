@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="pure-min.css"/>
   <link rel="stylesheet" href="app.css"/>
 </head>
-<body>
+<body ng-controller="SimpleController">
 
 <h1>Welcome to Angular FTW</h1>
 
@@ -18,5 +18,10 @@
 <h2>Your name is {{ name }}</h2>
 
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+  var SimpleController = function($scope) {
+    $scope.name = "Glen is rad";
+  };
+</script>
 </body>
 </html>
