@@ -1,13 +1,14 @@
 'use strict';
 
-angular.module('presentationApp', [])
+var presentationApp = angular.module('presentationApp', [])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/slides', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        reloadOnSearch: false
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/slides'
       });
   });
