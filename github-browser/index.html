@@ -56,9 +56,11 @@
   </div>
 
   <div class="pure-u-1-3" ng-controller="RepositoryViewController">
-    <h4>Files</h4>
+    <h4>Files <span ng-show="view.repo">for {{ view.repo.name }}</span></h4>
 
-
+    <div ng-repeat="file in view.files">
+      <h5>{{ file.name }}</h5>
+    </div>
   </div>
 </div>
 
@@ -71,5 +73,6 @@
 <script type="text/javascript" src="scripts/repository_view_controller.js"></script>
 <script type="text/javascript" src="scripts/services/search.js"></script>
 <script type="text/javascript" src="scripts/services/state.js"></script>
+<script type="text/javascript" src="scripts/services/view.js"></script>
 </body>
 </html>
