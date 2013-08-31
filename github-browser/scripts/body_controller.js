@@ -1,3 +1,4 @@
-var BodyController = function ($scope) {
+app.controller("BodyController", function ($scope) {
   $scope.me = {};
-};
+});
+

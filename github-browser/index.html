@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="GithubBrowser">
 <head>
   <title>Angular FTW</title>
   <link rel="stylesheet" href="pure-min.css"/>
@@ -13,7 +13,7 @@
     What is your name?
     <input type="text" ng-model="me.name"/>
   </label>
-  <button class="pure-button pure-button-primary" ng-click="me.name = ''">Reset</button>
+  <button class="pure-button pure-button-primary" ng-click="reset()">Reset</button>
 </form>
 
 <h2 ng-show="me.name">Your name is {{ me.name }}</h2>
