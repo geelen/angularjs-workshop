@@ -1,19 +1,9 @@
 (function (app) {
   'use strict';
 
-  app.controller("RepositoryListController", function ($scope, $http, State) {
-    $scope.repos = {
-      updateUser: function (user) {
-        this.selectedUser = user;
-        if (user) {
-          console.log("Searching for repos...");
-          $http.get("https://api.github.com/users/" + user.username + "/repos")
-            .success(angular.bind(this, function (data) {
-              this.list = data;
-            }));
-        }
-      }
-    };
+  app.controller("RepositoryListController", function ($scope, $http, RepoList, State) {
+    $scope.filterTerm = '';
+    $scope.repos = RepoList;
 
     $scope.selectRepo = function (repo) {
       State.selectedRepo = repo;
@@ -21,7 +11,7 @@
 
     $scope.$watch(function () {
       return State.selectedUser;
-    }, angular.bind($scope.repos, $scope.repos.updateUser));
+    }, angular.bind(RepoList, RepoList.updateUser));
   });
 
 
