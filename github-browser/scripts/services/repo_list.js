@@ -14,14 +14,7 @@
     RepoList.updateUser = function (user) {
       RepoList.selectedUser = user;
       if (user) {
-        RepoList.list = null;
-        $http.get("https://api.github.com/users/" + user.username + "/repos")
-          .success(function (data) {
-            RepoList.list = data;
-          })
-          .error(function(data) {
-            RepoList.list = [];
-          })
+        RepoList.list = $http.get("https://api.github.com/users/" + user.username + "/repos");
       }
     };
 

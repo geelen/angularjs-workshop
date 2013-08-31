@@ -14,10 +14,7 @@
     View.updateRepo = function (repo) {
       this.repo = repo;
       if (repo && repo.contents_url) {
-        console.log("Fetching repo...");
-        $http.get(repo.contents_url.replace(/{\+path}/, "")).success(function (data) {
-          View.files = data;
-        })
+        View.files = $http.get(repo.contents_url.replace(/{\+path}/, ""));
       }
     };
 
