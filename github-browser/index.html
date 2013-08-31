@@ -6,7 +6,7 @@
 </head>
 <body ng-controller="BodyController">
 
-<h1>Welcome to Angular FTW</h1>
+<h1>Welcome to Angular FTW<span ng-show='me.name'>, {{ me.name }}</span></h1>
 
 <form class="pure-form" ng-controller="FormController">
   <label>
@@ -15,9 +15,6 @@
   </label>
   <button class="pure-button pure-button-primary" ng-click="reset()">Reset</button>
 </form>
-
-<h2 ng-show="me.name">Your name is {{ me.name }}</h2>
-<h2 ng-hide="me.name">Whoa buddy, put in your name first!</h2>
 
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
