@@ -12,9 +12,14 @@
 
     // Function implementations
     View.updateRepo = function (repo) {
-      this.repo = repo;
+      View.repo = repo;
       if (repo && repo.contents_url) {
-        View.files = $http.get(repo.contents_url.replace(/{\+path}/, ""));
+        View.files = $http.get(repo.contents_url.replace(/{\+path}/, ""))
+          .then(function(response) {
+            return response.data;
+          }, function() {
+            return [];
+          })
       }
     };
 

@@ -11,7 +11,7 @@
 
     $scope.$watch(function () {
       return State.selectedUser;
-    }, angular.bind(RepoList, RepoList.updateUser));
+    }, RepoList.updateUser);
   });
 
 

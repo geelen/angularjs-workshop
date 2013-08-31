@@ -6,7 +6,7 @@
 
     $scope.$watch(function() {
       return State.selectedRepo;
-    }, angular.bind(View, View.updateRepo));
+    }, View.updateRepo);
   });
 
 
