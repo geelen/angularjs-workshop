@@ -4,25 +4,27 @@
   <link rel="stylesheet" href="pure-min.css"/>
   <link rel="stylesheet" href="app.css"/>
 </head>
-<body ng-controller="SimpleController">
+<body ng-controller="BodyController">
 
 <h1>Welcome to Angular FTW</h1>
 
-<form class="pure-form">
+<form class="pure-form" ng-controller="FormController">
   <label>
     What is your name?
-    <input type="text" ng-model="name"/>
+    <input type="text" ng-model="me.name"/>
   </label>
-  <button class="pure-button pure-button-primary" ng-click="name = ''">Reset</button>
+  <button class="pure-button pure-button-primary" ng-click="me.name = ''">Reset</button>
 </form>
 
-<h2 ng-show="name">Your name is {{ name }}</h2>
-<h2 ng-hide="name">Whoa buddy, put in your name first!</h2>
+<h2 ng-show="me.name">Your name is {{ me.name }}</h2>
+<h2 ng-hide="me.name">Whoa buddy, put in your name first!</h2>
 
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 <script type="text/javascript">
-  var SimpleController = function($scope) {
-    $scope.name = "";
+  var BodyController = function($scope) {
+    $scope.me = {};
+  };
+  var FormController = function($scope) {
   };
 </script>
 </body>
