@@ -5,7 +5,7 @@
     $scope.search = Search;
 
     $scope.selectUser = function(user) {
-      $rootScope.$broadcast("USER WAS SELECTED", user);
+      Search.selectedUser = user;
     };
   });
 
