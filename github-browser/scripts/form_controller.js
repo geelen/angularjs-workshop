@@ -1,0 +1,2 @@
+var FormController = function($scope) {
+};
