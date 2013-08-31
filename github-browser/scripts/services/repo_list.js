@@ -16,11 +16,11 @@
       if (user) {
         console.log("Searching for repos...");
         $http.get("https://api.github.com/users/" + user.username + "/repos")
-          .success(angular.bind(this, function (data) {
-            this.list = data;
-          }));
+          .success(function (data) {
+            RepoList.list = data;
+          });
       }
-    }
+    };
 
     return RepoList;
   });
