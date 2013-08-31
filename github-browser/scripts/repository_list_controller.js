@@ -9,9 +9,7 @@
       State.selectedRepo = repo;
     };
 
-    $scope.$watch(function () {
-      return State.selectedUser;
-    }, RepoList.updateUser);
+    State.$watch('selectedUser', RepoList.updateUser);
   });
 
 
