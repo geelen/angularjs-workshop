@@ -26,6 +26,8 @@
       <button class="pure-button pure-button-primary" ng-click="search.go()">Go</button>
     </form>
 
+    <h6 ng-hide="search.users != null">Loading...</h6>
+
     <div ng-repeat="user in search.users"
          ng-click="selectUser(user)"
          class="user-info">
