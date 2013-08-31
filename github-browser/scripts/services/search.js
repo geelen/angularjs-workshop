@@ -13,12 +13,11 @@
 
     // Function implementations
     Search.go = function () {
-      Search.users = null;
-      $http.get(githubSearchUrl + Search.term)
-        .success(function (response) {
-          Search.users = response.users;
-        }).error(function() {
-          Search.users = [];
+      Search.users = $http.get(githubSearchUrl + Search.term)
+        .then(function (response) {
+          return response.data.users;
+        }, function() {
+          return [];
         });
     };
 
