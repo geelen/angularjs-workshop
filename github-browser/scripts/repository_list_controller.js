@@ -1,8 +1,12 @@
 (function (app) {
   'use strict';
 
-  app.controller("RepositoryListController", function ($scope, $http, Search) {
-    $scope.search = Search;
+  app.controller("RepositoryListController", function ($scope, $http, State) {
+    $scope.$watch(function() {
+      return State.selectedUser;
+    }, function(newVal) {
+      $scope.selectedUser = newVal;
+    });
   });
 
 

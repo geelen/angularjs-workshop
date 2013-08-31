@@ -37,7 +37,7 @@
 
 
   <div class="pure-u-1-3" ng-controller="RepositoryListController">
-    <h4>Repositories for {{ search.selectedUser }}</h4>
+    <h4>Repositories for {{ selectedUser.name }}</h4>
   </div>
   <div class="pure-u-1-3">
     <h4>Files</h4>
@@ -51,5 +51,6 @@
 <script type="text/javascript" src="scripts/user_search_controller.js"></script>
 <script type="text/javascript" src="scripts/repository_list_controller.js"></script>
 <script type="text/javascript" src="scripts/services/search.js"></script>
+<script type="text/javascript" src="scripts/services/state.js"></script>
 </body>
 </html>

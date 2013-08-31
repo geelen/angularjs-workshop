@@ -17,8 +17,6 @@
         .success(function (response) {
           Search.users = response.users;
         });
-
-      console.log("Searching...");
     };
 
     return Search;

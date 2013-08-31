@@ -1,11 +1,11 @@
 (function (app) {
   'use strict';
 
-  app.controller("UserSearchController", function ($scope, Search, $rootScope) {
+  app.controller("UserSearchController", function ($scope, Search, State) {
     $scope.search = Search;
 
     $scope.selectUser = function(user) {
-      Search.selectedUser = user;
+      State.selectedUser = user;
     };
   });
 
