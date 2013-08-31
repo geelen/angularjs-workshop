@@ -44,11 +44,11 @@
     <form class="pure-form">
       <label>
         Filter:
-        <input type="text" ng-model="repos.filterTerm"/>
+        <input type="text" ng-model="filterTerm"/>
       </label>
     </form>
 
-    <div ng-repeat="repo in repos.list"
+    <div ng-repeat="repo in repos.list | filter:{name: filterTerm}"
          ng-click="selectRepo(repo)"
          class="user-info">
       <h5>{{ repo.name }}</h5>
@@ -74,5 +74,6 @@
 <script type="text/javascript" src="scripts/services/search.js"></script>
 <script type="text/javascript" src="scripts/services/state.js"></script>
 <script type="text/javascript" src="scripts/services/view.js"></script>
+<script type="text/javascript" src="scripts/services/repo_list.js"></script>
 </body>
 </html>
