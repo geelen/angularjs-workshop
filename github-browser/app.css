@@ -5,3 +5,12 @@
 body {
     margin: 20px;
 }
+
+.user-info {
+    overflow: hidden;
+    padding: 12px;
+}
+.user-info img {
+    float: left;
+    padding-right: 12px;
+}

@@ -24,6 +24,13 @@
       <input type="text" ng-model="search.term"/>
       <button class="pure-button pure-button-primary" ng-click="search.go()">Go</button>
     </form>
+
+    <div ng-repeat="user in search.users"
+         class="user-info">
+        <img ng-src="http://gravatar.com/avatar/{{ user.gravatar_id }}" alt=""/>
+        <h5>{{ user.name }}</h5>
+        <h6>{{ user.username }}</h6>
+    </div>
   </div>
   <div class="pure-u-1-3">
     <h4>Repositories</h4>
