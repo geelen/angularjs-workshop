@@ -12,13 +12,16 @@
 
     // Function implementations
     RepoList.updateUser = function (user) {
-      this.selectedUser = user;
+      RepoList.selectedUser = user;
       if (user) {
-        console.log("Searching for repos...");
+        RepoList.list = null;
         $http.get("https://api.github.com/users/" + user.username + "/repos")
           .success(function (data) {
             RepoList.list = data;
-          });
+          })
+          .error(function(data) {
+            RepoList.list = [];
+          })
       }
     };
 

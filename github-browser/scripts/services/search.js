@@ -13,15 +13,13 @@
 
     // Function implementations
     Search.go = function () {
-      Search.users = undefined;
+      Search.users = null;
       $http.get(githubSearchUrl + Search.term)
         .success(function (response) {
           Search.users = response.users;
         }).error(function() {
           Search.users = [];
         });
-
-      console.log("Searching...");
     };
 
     return Search;

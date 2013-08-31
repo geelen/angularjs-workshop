@@ -50,11 +50,14 @@
       </label>
     </form>
 
+    <h6 ng-hide="repos.list != null">Loading...</h6>
+
     <div ng-repeat="repo in repos.list | filter:{name: filterTerm}"
          ng-click="selectRepo(repo)"
          class="user-info">
       <h5>{{ repo.name }}</h5>
     </div>
+
   </div>
 
   <div class="pure-u-1-3" ng-controller="RepositoryViewController">
