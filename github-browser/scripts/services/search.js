@@ -1,10 +1,8 @@
 (function (app) {
   'use strict';
 
-  app.factory("Search", function ($http) {
+  app.factory("Search", function (GithubApi) {
     // Private state
-    var githubSearchUrl = "https://api.github.com/legacy/user/search/";
-
     // Initial values
     var Search = {
       users: [],
@@ -13,12 +11,11 @@
 
     // Function implementations
     Search.go = function () {
-      Search.users = $http.get(githubSearchUrl + Search.term)
-        .then(function (response) {
-          return response.data.users;
-        }, function() {
-          return [];
-        });
+      Search.users = GithubApi.search(this.term).then(function (response) {
+        return response.data.users;
+      }, function () {
+        return [];
+      });
     };
 
     return Search;

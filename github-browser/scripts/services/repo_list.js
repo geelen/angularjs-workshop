@@ -1,7 +1,7 @@
 (function (app) {
   'use strict';
 
-  app.factory("RepoList", function ($http) {
+  app.factory("RepoList", function (GithubApi) {
     // Private state
 
     // Initial values
@@ -14,12 +14,11 @@
     RepoList.updateUser = function (user) {
       RepoList.selectedUser = user;
       if (user) {
-        RepoList.list = $http.get("https://api.github.com/users/" + user.username + "/repos")
-          .then(function (response) {
-            return response.data;
-          }, function() {
-            return [];
-          })
+        RepoList.list = GithubApi.repos(user.username).then(function (response) {
+          return response.data;
+        }, function () {
+          return [];
+        })
       }
     };
 
