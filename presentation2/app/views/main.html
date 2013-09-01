@@ -1,0 +1,267 @@
+
+<div ng-click="clickPrev()" class="prev"></div>
+<div ng-click="clickNext()" class="next"></div>
+<div id="stage">
+  <slide><img src="http://angularftw.com/images/angularjsftw_logo.png" class="poster"/>
+    <footer class="profile">
+      <p class="sub">by</p>
+      <div class="image"></div>
+      <p>Glen Maddern</p><a href="http://twitter.com/glenmaddern">@glenmaddern</a>|<a href="http://goodfil.ms"> http://goodfil.ms</a>|<a href="mailto://glen@goodfil.ms"> glen@goodfil.ms</a>
+    </footer>
+  </slide>
+  <slide>
+    <h1>Who am I</h1>
+    <p class="sub">anyway?</p>
+    <ul>
+      <li step="step">Co-founder of <strong>Goodfilms</strong> (http://goodfil.ms)</li>
+      <li step="step">A <strong>once-reluctant, now enthusiastic</strong> web-developer.</li>
+      <li step="step">Built the <strong>Goodfilms mobile site</strong> in Angular in mid-2011.</li>
+      <li step="step">Have been using AngularJS for <strong>side-projects ever since</strong>.</li>
+      <li step="step">Built an <strong>interactive movie graph</strong> in Angular + D3js late last year.</li>
+      <li step="step">Presented Angular at <strong>Melbourne Ruby, MelbJS & SydJS</strong>.</li>
+      <li step="step">Someone who wants <strong>everyone to be using AngularJS</strong>.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>This course</h1>
+    <p class="sub">will cover</p>
+    <ul>
+      <li step="step">The <strong>AngularJS philosophy</strong> & introduction to the <strong>core concepts</strong>.</li>
+      <li step="step">How to use <strong>Directives & Filters</strong> to defeat your enemies.</li>
+      <li step="step">Scaffolding an app with <strong>Yeoman</strong> to reduce boilerplate to 0.</li>
+      <li step="step">The <strong>ease of testing</strong> your app at both unit & end-to-end levels.</li>
+      <li step="step"><strong>Communicating between controllers</strong> and handling global state.</li>
+      <li step="step">Decomposing your application into <strong>Services & Factories</strong></li>
+      <li step="step">Understanding how Angular's <strong>dependency injection</strong> wires everything up.</li>
+      <li step="step">How to resolve <strong>common pitfalls</strong> to avoid rage.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Why angular?</h1>
+    <ul>
+      <li step="step" class="ticked">it <strong>solves</strong> a problem well</li>
+      <li step="step" class="ticked">it's <strong>fast</strong> for small apps</li>
+      <li step="step" class="ticked">it's <strong>maintainable</strong> for large apps</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Learning Angular</h1>
+    <p class="sub">has 3 phases</p>
+  </slide>
+  <slide><img src="http://2.bp.blogspot.com/-q5aZsORjuwY/T1cJj5FZWWI/AAAAAAAAAOw/EkdsgmMb1FA/s1600/tumblr_lw4m1p8G5J1qzzh6g.jpg" class="big"/>
+    <h1>WHOA</h1>
+  </slide>
+  <slide><img src="http://www.thinkgeek.com/images/blog/khaaaan.jpg" class="big"/>
+    <h1>ANGULAAARRRR</h1>
+  </slide>
+  <slide><img src="http://media.npr.org/assets/img/2012/11/20/macklemore-thrift-shop-still_wide-7d4092008474938959d2a80d3216271a0a15e65c-s6-c10.jpg" class="big"/>
+    <h1>AWW HELL YEAH</h1>
+  </slide>
+  <slide>
+    <h1>Philosophy</h1>
+  </slide>
+  <slide>
+    <h1>Angular</h1>
+    <ul class="thin">
+      <li step="step">is a <strong>framework</strong> for building web applications.</li>
+      <li step="step">is an <strong>extension</strong> to HTML and browsers.</li>
+      <li step="step">asks "What would HTML look like if it was designed for <strong>applications</strong>, not documents?"</li>
+      <li step="step">asks "How would <strong>the browser</strong> behave in that case?"</li>
+      <li step="step">is an <strong>alternative</strong> to Backbone / Ember / Knockout.</li>
+      <li step="step">is an <strong>alternative</strong> to jQuery.</li>
+      <li step="step">is something <strong>new</strong>.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>HTML</h1>
+    <h3>is your templating language</h3>
+  </slide>
+  <slide>
+    <pre><code data-language="html">&lt;html ng-app&gt;</code></pre>
+    <pre><code data-language="html">&lt;input ng-model=...</code></pre>
+    <pre><code data-language="html">&lt;a ng-click=...</code></pre>
+    <pre><code data-language="html">&lt;div ng-show=...</code></pre>
+  </slide>
+  <slide>
+    <h3>The jQuery way</h3>
+    <pre><code data-language="html">&lt;a class='close' ...</code></pre>
+    <pre><code data-language="js">$('a.close').click(function( ...</code></pre>
+  </slide>
+  <slide>
+    <h3>The AngularJS alternative</h3>
+    <pre><code data-language="html">&lt;a ng-click='close()' ...</code></pre>
+    <pre><code data-language="js">$scope.close = function( ... </code></pre>
+    <h3 step="step">is very different from</h3>
+    <pre step="1"><code data-language="html">&lt;a onclick='close()' ...</code></pre>
+    <pre step="1"><code data-language="js">var close = function( ... </code></pre>
+  </slide>
+  <slide>
+    <h3>Interpolation is</h3>
+    <h2>{{ "{" + "{ easy }" + "}" }}</h2>
+  </slide>
+  <slide>
+    <snippet lang="html" file="examples/1/basics.html"></snippet>
+    <iframe src="examples/1/basics.html" step="step"></iframe>
+  </slide>
+  <slide>
+    <h3>Two-way data-binding</h3>
+    <pre><code data-language="html">&lt;input ng-model= ...</code></pre>
+  </slide>
+  <slide>
+    <snippet lang="html" file="examples/2/data-binding.html"></snippet>
+    <iframe src="examples/2/data-binding.html" step="step"></iframe>
+  </slide>
+  <slide>
+    <h3>Controllers</h3>
+    <pre><code data-language="html">&lt;div ng-controller='MyCtrl' ...</code></pre>
+    <pre><code data-language="js">var MyCtrl = function($scope, ... </code></pre>
+    <ul>
+      <li><strong>Scoped</strong> to a part of the DOM</li>
+      <li>Should <strong>NEVER</strong> touch the DOM</li>
+      <li>Instead, it sets values/methods on <code>$scope</code></li>
+    </ul>
+  </slide>
+  <slide>
+    <snippet lang="html" file="examples/3/simple-controller.html"></snippet>
+    <iframe src="examples/3/simple-controller.html" step="step"></iframe>
+  </slide>
+  <slide>
+    <h2>$scope</h2>
+    <ul>
+      <li>This is a <strong>view-model</strong></li>
+      <li>It's a <strong>plain-old-javascript-object</strong></li>
+      <li>Change it and the DOM changes, like <strong>magic</strong><sup>*</sup></li>
+    </ul>
+    <footer>* causes 90% of the 'WHOA' and 'ANGULAAARRRR' stages</footer>
+  </slide>
+  <slide>
+    <h3>Challenge: tabbed browsing</h3>
+    <snippet lang="html" file="examples/4/tabs.html"></snippet>
+    <snippet lang="js" file="examples/4/tabs.js"></snippet>
+  </slide>
+  <slide>
+    <h3>Tabbed browsing recap</h3>
+    <ul class="thin">
+      <li><code class="inline">ng-class=expr()</code>expects<code class="inline">expr()</code>to return either a string or a<code class="inline">{ className: truthy, ...</code>object.</li>
+      <li><code class="inline">ng-show=expr()</code>shows if<code class="inline">expr()</code>returns true. (There's also an<code class="inline">ng-hide</code>).</li>
+    </ul>
+  </slide>
+  <slide>
+    <h3>Challenge: twitter search</h3>
+    <p class="sub">introducing...</p>
+    <ul class="thin">
+      <li>The<code class="inline">ng-repeat</code>directive</li>
+      <li>Performing ajax requests with the<code class="inline">$http</code>service</li>
+      <li>Using a simple filter</li>
+    </ul>
+  </slide>
+  <slide>
+    <h3>Twitter search</h3>
+    <snippet lang="html" file="examples/5/twitter.html"></snippet>
+    <snippet lang="html" file="examples/5/twitter.js"></snippet>
+  </slide>
+  <slide>
+    <h3>Twitter recap</h3>
+    <ul class="thin">
+      <li><code class="inline">ng-repeat="single in plural"</code>is incredibly useful.</li>
+      <li>adding<code class="inline">| filter:term</code>to the end lets you instantly filter a list.</li>
+      <li><code class="inline">$http.jsonp</code>requires you to pass a<code class="inline">JSON_CALLBACK</code></li>
+      <li><code class="inline">http://docs.angularjs.org/api</code>is your friend.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Directives & Filters</h1>
+  </slide>
+  <slide>
+    <h3>First, a new syntax</h3>
+    <pre><code data-language="html">&lt;div ng-app='myapp'&gt;</code><br/><code data-language="html">  &lt;div ng-controller='MyCtrl' ...</code></pre>
+    <pre><code data-language="js">angular.module('myapp', [])</code><br/><code data-language="js">  .controller('MyCtrl', function($scope, ...</code></pre>
+    <p class="sub">replaces</p>
+    <pre><code data-language="html">&lt;div ng-app&gt;</code><br/><code data-language="html">  &lt;div ng-controller='MyCtrl' ...</code></pre>
+    <pre><code data-language="js">var MyCtrl = function($scope, ... </code></pre>
+  </slide>
+  <slide>
+    <h3>Filters</h3>
+    <snippet lang="html" file="examples/6/twitter-filters.html"></snippet>
+    <snippet lang="js" file="examples/6/twitter-filters.js"></snippet>
+  </slide>
+  <slide>
+    <h1>Directives</h1>
+    <ul>
+      <li>Define custom HTML elements/attributes</li>
+      <li>They're how<code class="inline">ng-click</code>et. al. are implemented</li>
+      <li>Are where your DOM manipulation goes</li>
+    </ul>
+  </slide>
+  <slide>
+    <h3>Directives</h3>
+    <p>Simple Version
+      <snippet lang="js" file="examples/7/directives-snippet-simple.js"></snippet>
+      <p class="sub">assumes</p>
+      <snippet lang="js" file="examples/7/directives-snippet-simple.html"></snippet>
+    </p>
+  </slide>
+  <slide>
+    <h3>Directives</h3>
+    <p>Slightly expanded
+      <snippet lang="js" file="examples/7/directives-snippet-expanded.js"></snippet>
+      <snippet lang="js" file="examples/7/directives-snippet-expanded.html"></snippet>
+    </p>
+  </slide>
+  <slide>
+    <h3>Directives
+      <snippet lang="html" file="examples/7/directives.html"></snippet>
+      <snippet lang="js" file="examples/7/directives.js"></snippet>
+    </h3>
+  </slide>
+  <slide>
+    <h3>Restrict options</h3>
+    <ul>
+      <li><code class="inline">restrict: A</code>(default) works with<code class="inline">&lt;div directive-name='something'&gt;</code></li>
+      <li><code class="inline">restrict: E</code>works with<code class="inline">&lt;directive-name&gt;</code></li>
+      <li><code class="inline">restrict: C</code>works with<code class="inline">&lt;div class='directive-name'&gt;</code></li>
+      <li><code class="inline">restrict: M</code>works with<code class="inline">&lt;!-- directive: something --&gt;</code></li>
+    </ul>
+  </slide>
+  <slide>
+    <h3>Challenge: Code snippet + iframe</h3>
+  </slide>
+  <slide>
+    <h1>Testing</h1>
+  </slide>
+  <slide></slide>
+  <slide>
+    <h2>Structure</h2><img src="/images/angularjs-structure.png" class="poster"/>
+  </slide>
+  <slide>
+    <h1>DEMO</h1>
+  </slide>
+  <slide>
+    <h1>Go be superheroes!</h1>
+    <ul>
+      <li>Read more at<a href="http://angularjs.org/"> http://angularjs.org/</a><br/>do the<a href="http://docs.angularjs.org/tutorial/"> tutorial</a>, keep the<a href="http://docs.angularjs.org/api/"> api reference</a>bookmarked.</li>
+      <li>Watch the introductory and advanced videos on the<br/><a href="http://www.youtube.com/user/angularjs/videos?view=0">Youtube channel</a>.</li>
+      <li>Check out<a href="https://github.com/geelen/melbjs-demo"> the code from tonight's demo</a>or<br/><a href="https://github.com/geelen/melbjs-preso"> the code from these slides</a>(more advanced)</li>
+      <li>Hit me up on Twitter if you have questions.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Thank you!</h1>
+    <div class="profile">
+      <p class="sub">I have been:</p>
+      <div class="image"></div>
+      <p>Glen Maddern</p><a href="http://twitter.com/glenmaddern">
+        @glenmaddern
+        |</a><a href="http://goodfil.ms">
+         http://goodfil.ms
+        |</a><a href="mailto://glen@goodfil.ms"> glen@goodfil.ms</a>
+    </div>
+    <p class="one-more-thing">
+      <p class="sub">also!</p>
+      <p>I am running a<strong> half-day AngularJS workshop</strong><br/>here in Melbourne on Saturday,<strong> 9th Feb</strong></p>
+      <p>It will cost<strong> $300</strong></p>
+      <p>Which is a<strong> bargain</strong>because you will learn<strong> heaps</strong></p>
+      <p>Register at<a href="http://angularftw.com/" target="_blank">angularftw.com</a></p>
+    </p>
+  </slide>
+</div>

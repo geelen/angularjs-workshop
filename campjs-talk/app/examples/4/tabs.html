@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href="../foundation.css">
+    <script src="../angular.js"></script>
+    <script src="tabs.js"></script>
+  </head>
+  <body ng-controller="TabController">
+    <!-- This is how the Foundation front-end framework does tabs -->
+    <dl class="tabs">
+      <dd ng-class='tabClass(1)'><a ng-click='selectTab(1)'>Simple Tab 1</a></dd>
+      <dd ng-class='tabClass(2)'><a ng-click='selectTab(2)'>Simple Tab 2</a></dd>
+      <dd ng-class='tabClass(3)'><a ng-click='selectTab(3)'>Simple Tab 3</a></dd>
+    </dl>
+    <ul>
+      <li ng-show='tabClass(1).active'>This is simple tab 1s content. Pretty neat, huh?</li>
+      <li ng-show='tabClass(2).active'>This is simple tab 2s content. Now you see it!</li>
+      <li ng-show='tabClass(3).active'>This is simple tab 3s content.</li>
+    </ul>
+
+  </body>
+</html>

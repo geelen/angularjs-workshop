@@ -1,0 +1,171 @@
+
+<div ng-click="clickPrev()" class="prev"></div>
+<div ng-click="clickNext()" class="next"></div>
+<div id="stage">
+  <slide><img src="/images/angularjsftw_logo.png" class="poster"/>
+    <footer class="profile">
+      <p class="sub">by</p>
+      <div class="image"></div>
+      <p>Glen Maddern</p><a href="http://twitter.com/glenmaddern">@glenmaddern</a>|<a href="http://goodfil.ms"> http://goodfil.ms</a>|<a href="mailto://glen@goodfil.ms"> glen@goodfil.ms</a>
+    </footer>
+  </slide>
+  <slide>
+    <h1>Who am I</h1>
+    <p class="sub">anyway?</p>
+    <ul>
+      <li step="step">Co-founder of <strong>Goodfilms</strong> (http://goodfil.ms)</li>
+      <li step="step">A <strong>once-reluctant, now enthusiastic</strong> web-developer.</li>
+      <li step="step">Built the <strong>Goodfilms mobile site</strong> in Angular in mid-2012.</li>
+      <li step="step">Have been using AngularJS for <strong>projects ever since</strong>.</li>
+      <li step="step">Someone who wants <strong>everyone to be using AngularJS</strong>.</li>
+    </ul>
+  </slide>
+  <slide>
+    <img src="http://files.goodfil.ms/goodfilms_iphone_screenshot_instagram.jpeg" class="poster"/>
+  </slide>
+  <slide>
+    <h1>Today's workshop</h1>
+    <p class="sub">will cover</p>
+    <ul>
+      <li step="step">The <strong>AngularJS philosophy</strong> & introduction to the <strong>core concepts</strong>.</li>
+      <li step="step">How to use <strong>Directives & Filters</strong> to defeat your enemies.</li>
+      <li step="step">How <strong>easy testing</strong> changes how you write javascript.</li>
+      <li step="step"><strong>Communicating between controllers</strong> and handling global state.</li>
+      <li step="step">Decomposing your application into <strong>Services & Factories</strong></li>
+      <li step="step">Understanding how Angular's <strong>dependency injection</strong> wires everything up.</li>
+      <li step="step">How to resolve <strong>common pitfalls</strong> to avoid rage.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Tomorrow's workshop</h1>
+    <p class="sub">will cover</p>
+    <ul>
+      <li step="step"><strong>Directives</strong>, probably</li>
+      <li step="step">More jQuery <strong>trash-talking</strong></li>
+      <li step="step"><strong>More things</strong>, for sure</li>
+      <li step="step">Come <strong>talk to me</strong> and give me ideas</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Why angular?</h1>
+    <ul>
+      <li step="step" class="ticked">it <strong>solves</strong> a problem well</li>
+      <li step="step" class="ticked">it's <strong>fast</strong> for small apps</li>
+      <li step="step" class="ticked">it's <strong>maintainable</strong> for large apps</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Learning Angular</h1>
+    <p class="sub">has 3 phases</p>
+  </slide>
+  <slide>
+    <img src="images/neo.jpg" class="big"/>
+    <h1>WHOA</h1>
+  </slide>
+  <slide><img src="images/khaaaan.jpg" class="big"/>
+    <h1>ANGULAAARRRR</h1>
+  </slide>
+  <slide><img src="images/macklemore.jpg" class="big"/>
+    <h1>AWW HELL YEAH</h1>
+  </slide>
+  <slide>
+    <h1>Philosophy</h1>
+  </slide>
+  <slide>
+    <h1>Angular</h1>
+    <ul class="thin">
+      <li step="step">is a <strong>framework</strong> for building web applications.</li>
+      <li step="step">is an <strong>extension</strong> to HTML and browsers.</li>
+      <li step="step">asks "What would HTML look like if it was designed for <strong>applications</strong>, not documents?"</li>
+      <li step="step">asks "How would <strong>the browser</strong> behave in that case?"</li>
+      <li step="step">is an <strong>alternative</strong> to Backbone / Ember / Knockout.</li>
+      <li step="step">is an <strong>alternative</strong> to jQuery.</li>
+      <li step="step">is something <strong>new</strong>.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h2>git clone http://herp.local:8080/.git angular-campjs</h2>
+  </slide>
+  <slide>
+    <h1>HTML</h1>
+    <h3>is your templating language</h3>
+  </slide>
+  <slide>
+    <pre><code data-language="html">&lt;html ng-app&gt;</code></pre>
+    <pre><code data-language="html">&lt;input ng-model=...</code></pre>
+    <pre><code data-language="html">&lt;a ng-click=...</code></pre>
+    <pre><code data-language="html">&lt;div ng-show=...</code></pre>
+  </slide>
+  <slide>
+    <h3>The jQuery way</h3>
+    <pre><code data-language="html">&lt;a class='close' ...</code></pre>
+    <pre><code data-language="js">$('a.close').click(function( ...</code></pre>
+  </slide>
+  <slide>
+    <h3>The AngularJS alternative</h3>
+    <pre><code data-language="html">&lt;a ng-click='close()' ...</code></pre>
+    <pre><code data-language="js">$scope.close = function( ... </code></pre>
+    <h3 step="step">is very different from</h3>
+    <pre step="1"><code data-language="html">&lt;a onclick='close()' ...</code></pre>
+    <pre step="1"><code data-language="js">var close = function( ... </code></pre>
+  </slide>
+  <slide>
+    <h3>Interpolation is</h3>
+    <h2>{{ "{" + "{ easy }" + "}" }}</h2>
+  </slide>
+  <slide>
+    <h3>Two-way data-binding</h3>
+    <pre><code data-language="html">&lt;input ng-model= ...</code></pre>
+  </slide>
+  <slide>
+    <h3>Controllers</h3>
+    <pre><code data-language="html">&lt;div ng-controller='MyCtrl' ...</code></pre>
+    <pre><code data-language="js">var MyCtrl = function($scope, ... </code></pre>
+    <ul>
+      <li><strong>Scoped</strong> to a part of the DOM</li>
+      <li>Should <strong>NEVER</strong> touch the DOM</li>
+      <li>Instead, it sets values/methods on <code>$scope</code></li>
+    </ul>
+  </slide>
+  <slide>
+    <h2>$scope</h2>
+    <ul>
+      <li>This is a <strong>view-model</strong></li>
+      <li>It's a <strong>plain-old-javascript-object</strong></li>
+      <li>Change it and the DOM changes, like <strong>magic</strong><sup>*</sup></li>
+    </ul>
+    <footer>* causes 90% of the 'WHOA' and 'ANGULAAARRRR' stages</footer>
+  </slide>
+  <slide>
+    <h3>A new syntax</h3>
+    <pre><code data-language="html">&lt;div ng-app='myapp'&gt;</code><br/><code data-language="html">  &lt;div ng-controller='MyCtrl' ...</code></pre>
+    <pre><code data-language="js">angular.module('myapp', [])</code><br/><code data-language="js">  .controller('MyCtrl', function($scope, ...</code></pre>
+    <p class="sub">replaces</p>
+    <pre><code data-language="html">&lt;div ng-app&gt;</code><br/><code data-language="html">  &lt;div ng-controller='MyCtrl' ...</code></pre>
+    <pre><code data-language="js">var MyCtrl = function($scope, ... </code></pre>
+  </slide>
+  <slide>
+    <h2>Structure</h2><img src="/images/angularjs-structure.png" class="poster"/>
+  </slide>
+  <slide>
+    <h1>Next Steps</h1>
+    <ul>
+      <li>Read more at<a href="http://angularjs.org/"> http://angularjs.org/</a><br/>do the<a href="http://docs.angularjs.org/tutorial/"> tutorial</a>, keep the<a href="http://docs.angularjs.org/api/"> api reference</a>bookmarked.</li>
+      <li>Check out <a href="http://egghead.io">http://egghead.io</a> - a great collection of screencasts</li>
+      <li>Follow <strong>@ngMelb</strong> on Twitter - next meetup is Wednesday 24th July</li>
+      <li>Ask me stuff on Twitter - <strong>@glenmaddern</strong>.</li>
+    </ul>
+  </slide>
+  <slide>
+    <h1>Thank you!</h1>
+    <div class="profile">
+      <p class="sub">I have been:</p>
+      <div class="image"></div>
+      <p>Glen Maddern</p><a href="http://twitter.com/glenmaddern">
+        @glenmaddern
+        |</a><a href="http://goodfil.ms">
+         http://goodfil.ms
+        |</a><a href="mailto://glen@goodfil.ms"> glen@goodfil.ms</a>
+    </div>
+  </slide>
+</div>

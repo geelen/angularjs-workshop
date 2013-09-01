@@ -1,0 +1,97 @@
+<html ng-app="GithubBrowser">
+<head>
+  <title>Angular FTW</title>
+  <link rel="stylesheet" href="pure-min.css"/>
+  <link rel="stylesheet" href="app.css"/>
+</head>
+<body ng-controller="BodyController">
+
+<script type="text/ng-template" id="welcome_message.html">
+
+  <form class="pure-form" ng-controller="FormController">
+    <h1>Welcome to Angular FTW{{ me.name | before:', ' }}</h1>
+
+    <label>
+      What is your name?
+      <input type="text" ng-model="me.name"/>
+    </label>
+    <button type="reset" class="pure-button pure-button-primary" ng-click="reset()">Reset</button>
+  </form>
+
+</script>
+
+<ng-include src="'welcome_message.html'"></ng-include>
+
+<h2>How rad is Angular?</h2>
+<draggable-slider ng-model="thisRad" slider-width="400"></draggable-slider>
+{{ thisRad | percentage }}
+
+<div class="pure-g">
+
+  <div class="pure-u-1-3" ng-controller="UserSearchController">
+    <h4>Users</h4>
+
+    <form class="pure-form">
+      <input type="text" ng-model="search.term"/>
+      <button class="pure-button pure-button-primary" ng-click="search.go()">Go</button>
+    </form>
+
+    <h6 ng-hide="search.users != null">Loading...</h6>
+
+    <div ng-repeat="user in search.users"
+         ng-click="selectUser(user)"
+         class="user-info">
+      <img ng-src="http://gravatar.com/avatar/{{ user.gravatar_id }}" alt=""/>
+      <h5>{{ user.name }}</h5>
+      <h6>{{ user.username }}</h6>
+    </div>
+  </div>
+
+
+  <div class="pure-u-1-3" ng-controller="RepositoryListController">
+    <h4>Repositories
+      <span ng-show="repos.selectedUser">for {{ repos.selectedUser.username }}</span>
+    </h4>
+
+    <form class="pure-form">
+      <label>
+        Filter:
+        <input type="text" ng-model="filterTerm"/>
+      </label>
+    </form>
+
+    <h6 ng-hide="repos.list != null">Loading...</h6>
+
+    <div ng-repeat="repo in repos.list | filter:{name: filterTerm}"
+         ng-click="selectRepo(repo)"
+         class="user-info">
+      <h5>{{ repo.name }}</h5>
+    </div>
+
+  </div>
+
+  <div class="pure-u-1-3" ng-controller="RepositoryViewController">
+    <h4>Files <span ng-show="view.repo">for {{ view.repo.name }}</span></h4>
+
+    <div ng-repeat="file in view.files">
+      <h5>{{ file.name }}</h5>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/body_controller.js"></script>
+<script type="text/javascript" src="scripts/form_controller.js"></script>
+<script type="text/javascript" src="scripts/user_search_controller.js"></script>
+<script type="text/javascript" src="scripts/repository_list_controller.js"></script>
+<script type="text/javascript" src="scripts/repository_view_controller.js"></script>
+<script type="text/javascript" src="scripts/services/search.js"></script>
+<script type="text/javascript" src="scripts/services/state.js"></script>
+<script type="text/javascript" src="scripts/services/view.js"></script>
+<script type="text/javascript" src="scripts/services/repo_list.js"></script>
+<script type="text/javascript" src="scripts/services/github_api.js"></script>
+
+
+</body>
+</html>

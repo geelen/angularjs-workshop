@@ -1,0 +1,11 @@
+<header ng-controller='HeaderCtrl'>
+  <form ng-submit='addGifs()'>
+    <label>Add tumblr:</label>
+    <input ng-model='newTumblrName'>
+    <button type="submit">Go!</button>
+  </form>
+</header>
+
+<div ng-controller='MainCtrl'>
+  <img ng-repeat='gif in gifs' ng-src='{{gif}}'>
+</div>

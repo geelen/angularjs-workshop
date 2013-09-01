@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+}
+
+.user-info {
+    overflow: hidden;
+    padding: 12px;
+}
+.user-info img {
+    float: left;
+    padding-right: 12px;
+}
+
+.slider {
+    margin: 24px;
+    height: 8px;
+    background-color: #CCC;
+    border-radius: 4px;
+}
+
+.slider .nib {
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background-color: #999;
+    position: relative;
+    top: -4px;
+    left: -8px;
+}
