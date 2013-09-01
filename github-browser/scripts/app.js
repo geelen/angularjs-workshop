@@ -22,26 +22,29 @@
     }
   })
 
-  app.directive("draggable", function ($document) {
-    return function (scope, elem, attrs) {
-      var dragging, startEvent;
-      $document
-        .bind('mousemove', function (e) {
-          if (dragging) {
-            scope.nibMargin = e.x - startEvent.x
-          }
-        })
-        .bind('mouseup', function (e) {
-          dragging = false;
-        });
+  app.directive("draggableSlider", function ($document) {
+    return {
+      restrict: 'E',
+      templateUrl: "slider_template.html",
+      link: function (scope, elem, attrs) {
+        var dragging, startEvent;
+        $document
+          .bind('mousemove', function (e) {
+            if (dragging) {
+              scope.nibMargin = e.x - startEvent.x
+            }
+          })
+          .bind('mouseup', function (e) {
+            dragging = false;
+          });
 
-      scope.startSliding = function(e) {
-        startEvent = e;
-        dragging = true;
-      };
+        scope.startSliding = function (e) {
+          startEvent = e;
+          dragging = true;
+        };
 
-      console.log(elem);
+        console.log(elem);
+      }
     }
-  })
-
+  });
 })();
