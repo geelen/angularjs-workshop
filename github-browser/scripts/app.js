@@ -25,7 +25,10 @@
   app.directive("draggableSlider", function ($document) {
     return {
       restrict: 'E',
-      templateUrl: "slider_template.html",
+      template: '' +
+        '<div class="slider" draggable ng-style="{width: sliderWidth}">' +
+        '  <div class="nib" ng-mousedown="startSliding($event)" ng-style="{marginLeft: nibPosition + \'%\'}"></div>' +
+        '</div>',
       replace: true,
       scope: {
         nibPosition: '=ngModel',
