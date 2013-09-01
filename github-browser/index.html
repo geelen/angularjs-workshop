@@ -8,7 +8,7 @@
 
 <script type="text/ng-template" id="slider_template.html">
 
-  <div class="slider" draggable>
+  <div class="slider" draggable ng-style="{width: sliderWidth}">
     <div class="nib" ng-mousedown="startSliding($event)" ng-style="{'margin-left': nibPosition + '%'}"></div>
   </div>
 
@@ -31,11 +31,11 @@
 <ng-include src="'welcome_message.html'"></ng-include>
 
 <h2>How rad is Angular?</h2>
-<draggable-slider ng-model="thisRad1"></draggable-slider>
+<draggable-slider ng-model="thisRad1" slider-width="400"></draggable-slider>
 {{ thisRad1 | percentage }}
-<draggable-slider ng-model="thisRad2"></draggable-slider>
+<draggable-slider ng-model="thisRad2" slider-width="200"></draggable-slider>
 {{ thisRad2 | percentage }}
-<draggable-slider ng-model="thisRad3"></draggable-slider>
+<draggable-slider ng-model="thisRad3" slider-width="300"></draggable-slider>
 {{ thisRad3 | percentage }}
 
 <div class="pure-g">

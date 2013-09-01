@@ -27,14 +27,15 @@
       restrict: 'E',
       templateUrl: "slider_template.html",
       scope: {
-        nibPosition: '=ngModel'
+        nibPosition: '=ngModel',
+        sliderWidth: '@'
       },
       link: function (scope, elem, attrs) {
         var dragging, startEvent;
         $document
           .bind('mousemove', function (e) {
             if (dragging) {
-              scope.nibPosition = Math.max(0, Math.min(400, e.x - startEvent.x))/ 4;
+              scope.nibPosition = 100 * Math.max(0, Math.min(scope.sliderWidth, e.x - startEvent.x)) / scope.sliderWidth;
               scope.$apply();
             }
           })
