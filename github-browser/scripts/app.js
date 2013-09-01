@@ -26,12 +26,16 @@
     return {
       restrict: 'E',
       templateUrl: "slider_template.html",
+      scope: {
+        nibPosition: '=ngModel'
+      },
       link: function (scope, elem, attrs) {
         var dragging, startEvent;
         $document
           .bind('mousemove', function (e) {
             if (dragging) {
-              scope.nibMargin = e.x - startEvent.x
+              scope.nibPosition = Math.max(0, Math.min(400, e.x - startEvent.x))/ 4;
+              scope.$apply();
             }
           })
           .bind('mouseup', function (e) {
@@ -39,7 +43,7 @@
           });
 
         scope.startSliding = function (e) {
-          startEvent = e;
+          if (!angular.isDefined(startEvent)) startEvent = e;
           dragging = true;
         };
 
