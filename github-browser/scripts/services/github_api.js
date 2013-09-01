@@ -2,16 +2,24 @@
   'use strict';
 
   app.factory("GithubApi", function ($http) {
-    var GithubApi = {
-      search: function(term) {
-        return $http.get("https://api.github.com/legacy/user/search/" + term);
-      },
-      repos: function(username) {
-        return $http.get("https://api.github.com/users/" + username + "/repos");
-      }
-    }
+    // Private API
+    var githubGet = function(url) {
+      return $http.get(url, {
+        headers: {
+          Authorization: "token 8e0e97fe6cfc172a1d640dac677255008e8ee73d"
+        }
+      });
+    };
 
-    return GithubApi;
+    // Public API
+    return {
+      search: function (term) {
+        return githubGet("https://api.github.com/legacy/user/search/" + term);
+      },
+      repos: function (username) {
+        return githubGet("https://api.github.com/users/" + username + "/repos");
+      }
+    };
   });
 
 
