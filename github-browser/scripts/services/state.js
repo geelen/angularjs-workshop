@@ -16,8 +16,6 @@
 
     // watchUrl
     var updateLocation = function () {
-      console.log(State.username);
-      console.log(State.reponame);
       var path = "/";
       if (State.username) {
         path += State.username;

@@ -26,6 +26,7 @@
     return {
       restrict: 'E',
       templateUrl: "slider_template.html",
+      replace: true,
       scope: {
         nibPosition: '=ngModel',
         sliderWidth: '@'
@@ -35,7 +36,8 @@
         $document
           .bind('mousemove', function (e) {
             if (dragging) {
-              scope.nibPosition = 100 * Math.max(0, Math.min(scope.sliderWidth, e.x - startEvent.x)) / scope.sliderWidth;
+              var width = elem[0].getClientRects()[0].width;
+              scope.nibPosition = 100 * Math.max(0, Math.min(width, e.x - startEvent.x)) / width;
               scope.$apply();
             }
           })
