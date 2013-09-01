@@ -9,8 +9,8 @@
 <h1>Welcome to Angular FTW{{ me.name | before:', ' }}</h1>
 
 <h2>How rad is Angular?</h2>
-<div class="slider">
-  <div class="nib"></div>
+<div class="slider" draggable>
+  <div class="nib" ng-mousedown="startSliding($event)" ng-style="{'margin-left': nibMargin() + 'px'}"></div>
 </div>
 {{ thisRad | percentage }}
 
