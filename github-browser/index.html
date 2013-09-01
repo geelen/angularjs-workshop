@@ -8,6 +8,12 @@
 
 <h1>Welcome to Angular FTW{{ me.name | before:', ' }}</h1>
 
+<h2>How rad is Angular?</h2>
+<div class="slider">
+  <div class="nib"></div>
+</div>
+{{ thisRad | percentage }}
+
 <form class="pure-form" ng-controller="FormController">
   <label>
     What is your name?
