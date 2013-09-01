@@ -47,8 +47,6 @@
           if (!angular.isDefined(startEvent)) startEvent = e;
           dragging = true;
         };
-
-        console.log(elem);
       }
     }
   });

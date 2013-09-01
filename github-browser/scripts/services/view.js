@@ -1,7 +1,7 @@
 (function (app) {
   'use strict';
 
-  app.factory("View", function ($http) {
+  app.factory("View", function (GithubApi) {
     // Private state
 
     // Initial values
@@ -14,12 +14,11 @@
     View.updateRepo = function (repo) {
       View.repo = repo;
       if (repo && repo.contents_url) {
-        View.files = $http.get(repo.contents_url.replace(/{\+path}/, ""))
-          .then(function(response) {
-            return response.data;
-          }, function() {
-            return [];
-          })
+        View.files = GithubApi.files(repo.contents_url).then(function (response) {
+          return response.data;
+        }, function () {
+          return [];
+        });
       }
     };
 

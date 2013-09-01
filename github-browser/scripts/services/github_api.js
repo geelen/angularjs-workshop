@@ -18,6 +18,9 @@
       },
       repos: function (username) {
         return githubGet("https://api.github.com/users/" + username + "/repos");
+      },
+      files: function (contents_url) {
+        return $http.get(contents_url.replace(/{\+path}/, ""));
       }
     };
   });
