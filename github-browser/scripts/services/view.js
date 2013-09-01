@@ -19,6 +19,8 @@
         }, function () {
           return [];
         });
+      } else {
+        View.files = [];
       }
     };
 

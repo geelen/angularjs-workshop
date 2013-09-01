@@ -16,7 +16,6 @@
       }, function () {
         return [];
       });
-      window.searchUsers = Search.users
     };
 
     return Search;
